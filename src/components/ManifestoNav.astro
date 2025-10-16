@@ -1,0 +1,98 @@
+---
+const sections = [
+    { id: 'overview', title: 'Our Values' },
+    { id: 'overview', title: 'Overview' },
+];
+const section2 = [
+    { id: 'join', title: 'Pyramid Scheme Payout' },
+    { id: 'join', title: 'Maximizing Shareholder Revenue' },
+    { id: 'join', title: 'Music made for Algorithms' },
+    { id: 'join', title: 'AI Songs & Bot Farms' },
+    { id: 'join', title: 'Pay-2-Play Playlists' }
+];
+const section3 = [
+    { id: 'join', title: 'Artist First' },
+    { id: 'join', title: 'Stream-2-Own' },
+    { id: 'join', title: 'No AI Policy' },
+    { id: 'join', title: 'Nonprofit' },
+    { id: 'join', title: 'Open Source' },
+];
+---
+
+<nav class="hidden lg:block fixed left-0 top-0 h-screen w-75 border-r border-[var(--monochrome-text)]/10 bg-[var(--bg-primary)]/95 backdrop-blur-sm overflow-y-auto z-[60]">
+    <div class="p-4 pt-6">
+        <div class="text-sm font-medium text-[var(--monochrome-text)] uppercase tracking-wider mb-4">
+            Introduction
+        </div>
+        <ul class="space-y-3">
+            {sections.map(section => (
+                <li>
+                    <a
+                        href={`#${section.id}`}
+                        class="block py-2 px-3 text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--monochrome-text)]/5 rounded transition-colors"
+                    >
+                        {section.title}
+                    </a>
+                </li>
+            ))}
+        </ul>
+        <div class="text-sm font-medium text-[var(--monochrome-text)] uppercase tracking-wider mb-4 mt-4">
+            Problems
+        </div>
+        <ul class="space-y-3">
+            {section2.map(section => (
+                    <li>
+                        <a
+                                href={`#${section.id}`}
+                                class="block py-2 px-3 text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--monochrome-text)]/5 rounded transition-colors"
+                        >
+                            {section.title}
+                        </a>
+                    </li>
+            ))}
+        </ul>
+
+        <div class="text-sm font-medium text-[var(--monochrome-text)] uppercase tracking-wider mb-4 mt-4">
+            Solutions
+        </div>
+        <ul class="space-y-3">
+            {section3.map(section => (
+                    <li>
+                        <a
+                                href={`#${section.id}`}
+                                class="block py-2 px-3 text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--monochrome-text)]/5 rounded transition-colors"
+                        >
+                            {section.title}
+                        </a>
+                    </li>
+            ))}
+        </ul>
+    </div>
+</nav>
+
+<script>
+    // Highlight current section based on scroll position
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                const id = entry.target.getAttribute('id');
+                const menuItem = document.querySelector(`nav a[href="#${id}"]`);
+
+                if (entry.intersectionRatio > 0) {
+                    document.querySelectorAll('nav a').forEach(link => {
+                        link.classList.remove('bg-[var(--monochrome-text)]/5', 'text-[var(--text-primary)]');
+                    });
+                    menuItem?.classList.add('bg-[var(--monochrome-text)]/5', 'text-[var(--text-primary)]');
+                }
+            });
+        },
+        {
+            rootMargin: '-20% 0px -80% 0px'
+        }
+    );
+
+    // Track all sections that have an ID applied
+    document.querySelectorAll('section[id]').forEach((section) => {
+        observer.observe(section);
+    });
+</script>

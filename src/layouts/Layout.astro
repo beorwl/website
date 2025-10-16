@@ -1,0 +1,36 @@
+---
+// Import the custom CSS directly in the component
+import '../styles/custom.css';
+import Footer from '../components/Footer.astro';
+
+export interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="BEORWL - Extreme Metal Streaming Platform. Artist First, Fuck Capitalism & No AI Bullshit. Raw, authentic music from artists who refuse to be exploited." />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+	</head>
+	<body class="flex flex-col min-h-screen">
+		<main class="flex-grow">
+			<slot />
+		</main>
+	</body>
+</html>
+
+<style is:global>
+	/* Import global.css for Tailwind directives */
+	@import '../styles/global.css';
+</style>

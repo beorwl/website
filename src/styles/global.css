@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+/* Monochrome Theme Color Palette */
+:root {
+  /* Core Colors */
+  --monochrome-bg: #1d2323;
+  --monochrome-text: #ea2745;
+  --monochrome-accent: #ea2745;
+  --monochrome-surface: #252a2a;
+  --monochrome-muted: rgba(234, 39, 69, 0.6);
+
+  /* Theme Tokens */
+  --bg-primary: var(--monochrome-bg);
+  --bg-surface: var(--monochrome-surface);
+  --text-primary: var(--monochrome-text);
+  --text-secondary: var(--monochrome-muted);
+  --accent: var(--monochrome-accent);
+
+  /* Keep references for backward compatibility */
+  --hex-violet: var(--monochrome-accent);
+  --blood-sigil: var(--monochrome-accent);
+  --eldritch-green: var(--monochrome-bg);
+  --abyssal-blue: var(--monochrome-bg);
+  --obsidian: var(--monochrome-bg);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-md text-sm font-medium transition-colors;
+  }
+  .btn-primary {
+    background: var(--accent);
+    color: var(--monochrome-bg);
+  }
+  .btn-primary:hover { opacity: 0.9; }
+  .btn-secondary {
+    background: transparent;
+    border: 1px solid var(--monochrome-accent);
+    color: var(--text-primary);
+  }
+  .btn-secondary:hover { background: rgba(234, 39, 69, 0.1); }
+  .surface { background: var(--bg-surface); }
+  .muted { color: var(--text-secondary); }
+  
+  /* Monochrome specific classes */
+  .text-monochrome {
+    color: var(--monochrome-text);
+  }
+  .text-monochrome-muted {
+    color: var(--monochrome-muted);
+  }
+
+  /* Hero occult background */
+  .hero-bg { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+  .symbol { position: absolute; opacity: 0.18; color: var(--accent); font-size: 2rem; line-height: 1; }
+  .symbol.s1 { top: 8%; left: 8%; animation: drift 18s linear infinite; }
+  .symbol.s2 { top: 20%; right: 10%; animation: drift 22s linear infinite reverse; }
+  .symbol.s3 { bottom: 18%; left: 12%; animation: drift 26s linear infinite; }
+  .symbol.s4 { top: 55%; left: 48%; animation: drift 24s linear infinite reverse; }
+  .symbol.s5 { bottom: 12%; right: 8%; animation: drift 20s linear infinite; }
+  .symbol.s6 { top: 35%; left: 4%; animation: drift 28s linear infinite reverse; }
+  .symbol.s7 { bottom: 30%; right: 5%; animation: drift 30s linear infinite; }
+  .symbol.large { font-size: 3rem; }
+  .symbol.small { font-size: 1.25rem; }
+}
+
+@keyframes drift {
+  0% { transform: translate3d(0, 0, 0) rotate(0deg); }
+  50% { transform: translate3d(10px, -12px, 0) rotate(10deg); }
+  100% { transform: translate3d(0, 0, 0) rotate(0deg); }
+}
