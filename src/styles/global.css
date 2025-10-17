@@ -41,7 +41,7 @@
     border: 1px solid var(--monochrome-accent);
     color: var(--text-primary);
   }
-  .btn-secondary:hover { background: rgba(234, 39, 69, 0.1); }
+  .btn-secondary:hover { background: color-mix(in srgb, var(--monochrome-accent) 10%, transparent); }
   .surface { background: var(--bg-surface); }
   .muted { color: var(--text-secondary); }
 
@@ -52,9 +52,6 @@
     color: var(--monochrome-muted);
   }
 
-    .background-surface {
-        background: #892A29;
-    }
 
   .hero-bg { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
   .symbol { position: absolute; opacity: 0.18; color: var(--accent); font-size: 2rem; line-height: 1; }

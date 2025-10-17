@@ -1,21 +1,21 @@
 ---
-const sections = [
-    { id: 'overview', title: 'Our Values' },
+const introduction = [
+    { id: 'values', title: 'Our Values' },
     { id: 'overview', title: 'Overview' },
 ];
-const section2 = [
-    { id: 'join', title: 'Pyramid Scheme Payout' },
-    { id: 'join', title: 'Maximizing Shareholder Revenue' },
-    { id: 'join', title: 'Music made for Algorithms' },
-    { id: 'join', title: 'AI Songs & Bot Farms' },
-    { id: 'join', title: 'Pay-2-Play Playlists' }
+const problems = [
+    { id: 'pyramid-scheme-payout', title: 'Pyramid Scheme Payout' },
+    { id: 'maximizing-shareholder-revenue', title: 'Maximizing Shareholder Revenue' },
+    { id: 'music-made-for-algorithms', title: 'Music made for Algorithms' },
+    { id: 'ai-songs-and-bot-farms', title: 'AI Songs & Bot Farms' },
+    { id: 'pay-2-play-playlists', title: 'Pay-2-Play Playlists' }
 ];
-const section3 = [
-    { id: 'join', title: 'Artist First' },
-    { id: 'join', title: 'Stream-2-Own' },
-    { id: 'join', title: 'No AI Policy' },
-    { id: 'join', title: 'Nonprofit' },
-    { id: 'join', title: 'Open Source' },
+const solutions = [
+    { id: 'artist-first', title: 'Artist First' },
+    { id: 'stream-2-own', title: 'Stream-2-Own' },
+    { id: 'no-ai-policy', title: 'No AI Policy' },
+    { id: 'nonprofit', title: 'Nonprofit' },
+    { id: 'open-source', title: 'Open Source' },
 ];
 ---
 
@@ -24,8 +24,8 @@ const section3 = [
         <div class="text-sm font-medium text-[var(--monochrome-text)] uppercase tracking-wider mb-4">
             Introduction
         </div>
-        <ul class="space-y-3">
-            {sections.map(section => (
+        <ul class="space-y-0">
+            {introduction.map(section => (
                 <li>
                     <a
                         href={`#${section.id}`}
@@ -39,8 +39,8 @@ const section3 = [
         <div class="text-sm font-medium text-[var(--monochrome-text)] uppercase tracking-wider mb-4 mt-4">
             Problems
         </div>
-        <ul class="space-y-3">
-            {section2.map(section => (
+        <ul class="space-y-0">
+            {problems.map(section => (
                     <li>
                         <a
                                 href={`#${section.id}`}
@@ -55,8 +55,8 @@ const section3 = [
         <div class="text-sm font-medium text-[var(--monochrome-text)] uppercase tracking-wider mb-4 mt-4">
             Solutions
         </div>
-        <ul class="space-y-3">
-            {section3.map(section => (
+        <ul class="space-y-0">
+            {solutions.map(section => (
                     <li>
                         <a
                                 href={`#${section.id}`}

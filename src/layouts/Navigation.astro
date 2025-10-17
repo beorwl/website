@@ -4,7 +4,7 @@ const { pathname } = Astro.url;
 <header class="sticky top-0 z-50 bg-[var(--bg-primary)]/90">
     <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         <div class="flex items-center gap-8">
-            <a href="/public" class="flex items-center gap-1 font-[Orbitron] text-lg font-semibold tracking-wide">
+            <a href="/" class="flex items-center gap-1 font-[Orbitron] text-lg font-semibold tracking-wide">
                 <div class="flex items-center justify-center w-6 h-6 rounded-lg bg-[var(--monochrome-text)] text-[var(--monochrome-bg)] text-base font-bold">
                     O
                 </div>
@@ -39,17 +39,17 @@ const { pathname } = Astro.url;
                     <!-- Dropdown Content -->
                     <div class="absolute left-0 top-full pt-2 opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-200">
                         <div class="w-64 surface rounded-lg border border-[var(--monochrome-text)]/20 shadow-lg shadow-black/50 backdrop-blur-xl overflow-hidden">
-                            <a href="https://discord.gg/beorwl" class="block p-4 hover:bg-[var(--monochrome-text)]/5 transition-colors">
-                                <div class="font-semibold mb-1" style="color: var(--monochrome-text)">Verein beitreten</div>
-                                <div class="text-sm text-[var(--text-secondary)]">Join us in the community</div>
+                            <a href="/coming-soon" class="block p-4 hover:bg-[var(--monochrome-text)]/5 transition-colors">
+                                <div class="font-semibold mb-1" style="color: var(--monochrome-text)">Become a Member</div>
+                                <div class="text-sm text-[var(--text-secondary)]">Contribute to the nonprofit org</div>
                             </a>
-                            <a href="https://discord.gg/beorwl" class="block p-4 hover:bg-[var(--monochrome-text)]/5 transition-colors">
-                                <div class="font-semibold mb-1" style="color: var(--monochrome-text)">Discord</div>
-                                <div class="text-sm text-[var(--text-secondary)]">Join us in the community</div>
-                            </a>
-                            <a href="https://discord.gg/beorwl" class="block p-4 hover:bg-[var(--monochrome-text)]/5 transition-colors">
+                            <a href="/coming-soon" class="block p-4 hover:bg-[var(--monochrome-text)]/5 transition-colors">
                                 <div class="font-semibold mb-1" style="color: var(--monochrome-text)">Open Roundtables</div>
-                                <div class="text-sm text-[var(--text-secondary)]">Join us in the community</div>
+                                <div class="text-sm text-[var(--text-secondary)]">Participate in agenda decisions</div>
+                            </a>
+                            <a href="/coming-soon" class="block p-4 hover:bg-[var(--monochrome-text)]/5 transition-colors">
+                                <div class="font-semibold mb-1" style="color: var(--monochrome-text)">Discord</div>
+                                <div class="text-sm text-[var(--text-secondary)]">Discuss with us in the community</div>
                             </a>
                         </div>
                     </div>
@@ -71,9 +71,9 @@ const { pathname } = Astro.url;
                                 <div class="font-semibold mb-1" style="color: var(--monochrome-text)">Manifesto</div>
                                 <div class="text-sm text-[var(--text-secondary)]">Our vision for fair music streaming</div>
                             </a>
-                            <a href="/docs/handbook" class="block p-4 hover:bg-[var(--monochrome-text)]/5 transition-colors">
+                            <a href="https://github.com/orgs/beorwl/repositories" class="block p-4 hover:bg-[var(--monochrome-text)]/5 transition-colors">
                                 <div class="font-semibold mb-1" style="color: var(--monochrome-text)">Developer Handbook</div>
-                                <div class="text-sm text-[var(--text-secondary)]">Help us build BEORWL</div>
+                                <div class="text-sm text-[var(--text-secondary)]">Help us to build</div>
                             </a>
                         </div>
                     </div>
@@ -91,7 +91,7 @@ const { pathname } = Astro.url;
             <a href="/for-artists-and-labels" class="btn btn-secondary">
                 For Artists & Labels
             </a>
-            <a href="/public#waitlist" class="btn btn-primary">Download App</a>
+            <a href="/coming-soon" class="btn btn-primary">Download App</a>
 
         </div>
     </div>

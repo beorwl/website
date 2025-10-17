@@ -3,7 +3,6 @@ import Layout from '../layouts/Layout.astro';
 import Navigation from '../layouts/Navigation.astro';
 import Footer from "../layouts/Footer.astro";
 import StreamingCostSlider from "../components/StreamingCostSlider.astro";
-import CloudStoragePricing from "../components/CloudStoragePricing.astro";
 ---
 
 <Layout title="ORWL - Time To Stream Fair">
@@ -39,9 +38,10 @@ import CloudStoragePricing from "../components/CloudStoragePricing.astro";
                     Your music, your rules. Take back control of your music library, keep your collection yours and stream the way it was meant to be. Fair and Independent.
 				</p>
 				<div class="flex flex-col sm:flex-row gap-4 justify-center">
-					<button class="btn btn-primary">
-						Join The Community
-					</button>
+                    <a href="/coming-soon" class="btn btn-primary">
+                        Join The Community
+                    </a>
+
 					<a href="/manifesto" class="btn btn-secondary">
 						Read The Manifesto
 					</a>
@@ -128,7 +128,10 @@ import CloudStoragePricing from "../components/CloudStoragePricing.astro";
 						</div>
 						<h3 class="text-xl font-bold mb-2" style="color: var(--monochrome-accent)">Stream By Stream</h3>
 						<p class="text-[var(--text-secondary)]">
-                            Each time you listen, you’re building ownership. Your streams directly support the artist and bring you closer to owning the track forever.
+                            Each time you listen, you’re building ownership.
+                        </p>
+                        <p class="text-[var(--text-secondary)] mt-2">
+                            Your streams directly support the artist and bring you closer to owning the track forever.
                         </p>
 					</div>
 
@@ -141,7 +144,10 @@ import CloudStoragePricing from "../components/CloudStoragePricing.astro";
 						</div>
 						<h3 class="text-xl font-bold mb-2" style="color: var(--monochrome-accent)">Own The Song</h3>
 						<p class="text-[var(--text-secondary)]">
-                            Once you’ve streamed a song eight times, it’s yours. Download it, keep it forever and enjoy your it your way. Even if you leave us.
+                            Once you’ve streamed a song eight times, it’s yours.
+                        </p>
+                        <p class="text-[var(--text-secondary)] mt-2">
+                            Download it, keep it forever and enjoy your it your way. Even if you leave us.
                         </p>
 					</div>
 
@@ -166,19 +172,128 @@ import CloudStoragePricing from "../components/CloudStoragePricing.astro";
 
 
 
+        <section class="py-24 px-6">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center mb-16">
+                            <span class="px-3 py-1 rounded-full text-[10px] md:text-xs tracking-widest uppercase bg-[var(--bg-primary)] text-[var(--accent)] border border-[var(--accent)]/40 inline-block mb-4">
+                            Integrate Your Own Library
+                       </span>
 
-        <CloudStoragePricing />
+                    <h2 class="text-4xl md:text-5xl font-[Secular_One] mb-4">Missing your Favorite Artists?</h2>
+                    <p class="text-[var(--text-secondary)] max-w-2xl mx-auto">Simply upload your own audio files to your optional cloud storage and stream your personal music library from anywhere.</p>
+                </div>
+
+                <!-- Cloud Storage Pricing -->
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mt-12">
+                    <div class="surface p-8 rounded-lg border border-[var(--monochrome-accent)]/20 hover:border-[var(--monochrome-accent)]/40 transition-all">
+                        <div class="text-center">
+                            <h3 class="text-2xl font-bold mb-2" style="color: var(--monochrome-accent)">Free</h3>
+                            <div class="mb-6">
+                                <span class="text-5xl font-bold">0€</span>
+                                <span class="text-[var(--text-secondary)]">/month</span>
+                            </div>
+                            <div class="text-4xl font-bold mb-6 text-[var(--accent)]">100 MB</div>
+                            <ul class="text-left space-y-3 mb-8 text-[var(--text-secondary)]">
+                                <li class="flex items-start gap-2">
+                                    <span class="text-[var(--accent)] mt-1">✓</span>
+                                    <span>Upload ~20 Songs</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-[var(--accent)] mt-1">✓</span>
+                                    <span>Stream from anywhere</span>
+                                </li>
+                            </ul>
+                            <a href="/coming-soon" class="btn btn-secondary w-full">Get Started</a>
+                        </div>
+                    </div>
+
+                    <!-- 10GB Plan -->
+                    <div class="surface p-8 rounded-lg border border-[var(--monochrome-accent)]/20 hover:border-[var(--monochrome-accent)]/40 transition-all">
+                        <div class="text-center">
+                            <h3 class="text-2xl font-bold mb-2" style="color: var(--monochrome-accent)">Small</h3>
+                            <div class="mb-6">
+                                <span class="text-5xl font-bold">2€</span>
+                                <span class="text-[var(--text-secondary)]">/month</span>
+                            </div>
+                            <div class="text-4xl font-bold mb-6 text-[var(--accent)]">5 GB</div>
+                            <ul class="text-left space-y-3 mb-8 text-[var(--text-secondary)]">
+                                <li class="flex items-start gap-2">
+                                    <span class="text-[var(--accent)] mt-1">✓</span>
+                                    <span>Upload ~1,500 Songs</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-[var(--accent)] mt-1">✓</span>
+                                    <span>Stream from anywhere</span>
+                                </li>
+                            </ul>
+                            <a href="/coming-soon" class="btn btn-secondary w-full">Get Started</a>
+                        </div>
+                    </div>
+
+                    <!-- 50GB Plan -->
+                    <div class="surface p-8 rounded-lg border border-[var(--monochrome-accent)]/20 hover:border-[var(--monochrome-accent)]/40 transition-all">
+                        <div class="text-center">
+                            <h3 class="text-2xl font-bold mb-2" style="color: var(--monochrome-accent)">Medium</h3>
+                            <div class="mb-6">
+                                <span class="text-5xl font-bold">4€</span>
+                                <span class="text-[var(--text-secondary)]">/month</span>
+                            </div>
+                            <div class="text-4xl font-bold mb-6 text-[var(--accent)]">50 GB</div>
+                            <ul class="text-left space-y-3 mb-8 text-[var(--text-secondary)]">
+                                <li class="flex items-start gap-2">
+                                    <span class="text-[var(--accent)] mt-1">✓</span>
+                                    <span>Upload ~12,500 Songs</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-[var(--accent)] mt-1">✓</span>
+                                    <span>Stream from anywhere</span>
+                                </li>
+                            </ul>
+                            <a href="/coming-soon" class="btn btn-secondary w-full">Get Started</a>
+                        </div>
+                    </div>
+
+                    <!-- 100GB Plan -->
+                    <div class="surface p-8 rounded-lg border border-[var(--monochrome-accent)]/20 hover:border-[var(--monochrome-accent)]/40 transition-all">
+                        <div class="text-center">
+                            <h3 class="text-2xl font-bold mb-2" style="color: var(--monochrome-accent)">Large</h3>
+                            <div class="mb-6">
+                                <span class="text-5xl font-bold">9€</span>
+                                <span class="text-[var(--text-secondary)]">/month</span>
+                            </div>
+                            <div class="text-4xl font-bold mb-6 text-[var(--accent)]">100 GB</div>
+                            <ul class="text-left space-y-3 mb-8 text-[var(--text-secondary)]">
+                                <li class="flex items-start gap-2">
+                                    <span class="text-[var(--accent)] mt-1">✓</span>
+                                    <span> Upload~25,000 Songs</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-[var(--accent)] mt-1">✓</span>
+                                    <span>Stream from anywhere</span>
+                                </li>
+                            </ul>
+                            <a href="/coming-soon" class="btn btn-secondary w-full">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-12">
+                    <p class="text-[var(--text-secondary)] text-sm">
+                        Cloud storage is completely optional. You can still stream our entire library without it.
+                    </p>
+                </div>
+            </div>
+        </section>
 
 
         <!-- FAQ Section -->
 		<section class="py-24 px-6">
 			<div class="max-w-4xl mx-auto">
 				<div class="text-center mb-16">
-					<span class="px-3 py-1 rounded-full text-[10px] md:text-xs tracking-widest uppercase bg-[var(--bg-surface)] text-[var(--accent)] border border-[var(--accent)]/40 inline-block mb-4">
-						FAQ
-					</span>
+			        <span class="px-3 py-1 rounded-full text-[10px] md:text-xs tracking-widest uppercase bg-[var(--bg-primary)] text-[var(--accent)] border border-[var(--accent)]/40 inline-block mb-4">
+                           FAQ
+                       </span>
 					<h2 class="text-4xl md:text-5xl font-[Secular_One] mb-4">Common Questions</h2>
-					<p class="text-[var(--text-secondary)] max-w-2xl mx-auto">Everything you need to know about BEORWL's revolutionary Stream2Own platform</p>
 				</div>
 
 				<div class="space-y-4">
@@ -257,7 +372,7 @@ import CloudStoragePricing from "../components/CloudStoragePricing.astro";
 				</div>
 
 				<div class="text-center mt-12">
-					<a href="/manifesto" class="btn btn-primary">Read Our Full Manifesto</a>
+					<a href="/manifesto" class="btn btn-secondary">Read The Manifesto</a>
 				</div>
 			</div>
 		</section>
