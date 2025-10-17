@@ -78,21 +78,26 @@ const solutions = [
                 const id = entry.target.getAttribute('id');
                 const menuItem = document.querySelector(`nav a[href="#${id}"]`);
 
-                if (entry.intersectionRatio > 0) {
+                if (entry.isIntersecting) {
                     document.querySelectorAll('nav a').forEach(link => {
                         link.classList.remove('bg-[var(--monochrome-text)]/5', 'text-[var(--text-primary)]');
+                        link.classList.add('text-[var(--text-secondary)]');
                     });
-                    menuItem?.classList.add('bg-[var(--monochrome-text)]/5', 'text-[var(--text-primary)]');
+                    if (menuItem) {
+                        menuItem.classList.remove('text-[var(--text-secondary)]');
+                        menuItem.classList.add('bg-[var(--monochrome-text)]/5', 'text-[var(--text-primary)]');
+                    }
                 }
             });
         },
         {
-            rootMargin: '-20% 0px -80% 0px'
+            rootMargin: '-20% 0px -70% 0px',
+            threshold: 0.1
         }
     );
 
-    // Track all sections that have an ID applied
-    document.querySelectorAll('section[id]').forEach((section) => {
-        observer.observe(section);
+    // Track all h2 and h3 elements that have an ID
+    document.querySelectorAll('h2[id], h3[id]').forEach((heading) => {
+        observer.observe(heading);
     });
 </script>
