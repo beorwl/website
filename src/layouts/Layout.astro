@@ -1,7 +1,5 @@
 ---
-// Import the custom CSS directly in the component
-import '../styles/custom.css';
-import Footer from '../components/Footer.astro';
+import '../styles/global.css';
 
 export interface Props {
 	title: string;
@@ -31,6 +29,5 @@ const { title } = Astro.props;
 </html>
 
 <style is:global>
-	/* Import global.css for Tailwind directives */
 	@import '../styles/global.css';
 </style>

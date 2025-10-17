@@ -1,27 +1,17 @@
 @import "tailwindcss";
 
-/* Monochrome Theme Color Palette */
 :root {
-  /* Core Colors */
   --monochrome-bg: #1d2323;
-  --monochrome-text: #ea2745;
-  --monochrome-accent: #ea2745;
+  --monochrome-text: #ED4341;
+  --monochrome-accent: #ED4341;
   --monochrome-surface: #252a2a;
-  --monochrome-muted: rgba(234, 39, 69, 0.6);
+  --monochrome-muted: color-mix(in srgb, var(--monochrome-accent) 90%, transparent);
 
-  /* Theme Tokens */
   --bg-primary: var(--monochrome-bg);
   --bg-surface: var(--monochrome-surface);
-  --text-primary: var(--monochrome-text);
+  --text-primary: var(--monochrome-muted);
   --text-secondary: var(--monochrome-muted);
   --accent: var(--monochrome-accent);
-
-  /* Keep references for backward compatibility */
-  --hex-violet: var(--monochrome-accent);
-  --blood-sigil: var(--monochrome-accent);
-  --eldritch-green: var(--monochrome-bg);
-  --abyssal-blue: var(--monochrome-bg);
-  --obsidian: var(--monochrome-bg);
 }
 
 @layer base {
@@ -54,8 +44,7 @@
   .btn-secondary:hover { background: rgba(234, 39, 69, 0.1); }
   .surface { background: var(--bg-surface); }
   .muted { color: var(--text-secondary); }
-  
-  /* Monochrome specific classes */
+
   .text-monochrome {
     color: var(--monochrome-text);
   }
@@ -63,7 +52,10 @@
     color: var(--monochrome-muted);
   }
 
-  /* Hero occult background */
+    .background-surface {
+        background: #892A29;
+    }
+
   .hero-bg { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
   .symbol { position: absolute; opacity: 0.18; color: var(--accent); font-size: 2rem; line-height: 1; }
   .symbol.s1 { top: 8%; left: 8%; animation: drift 18s linear infinite; }

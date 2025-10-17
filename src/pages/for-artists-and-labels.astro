@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Navigation from '../components/Navigation.astro';
-import Footer from '../components/Footer.astro';
+import Navigation from '../layouts/Navigation.astro';
+import Footer from '../layouts/Footer.astro';
 import FairLabelDeals from "../components/FairLabelDeals.astro";
 ---
 
@@ -42,12 +42,12 @@ import FairLabelDeals from "../components/FairLabelDeals.astro";
 				<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 					<!-- Benefit 1 -->
 					<div class="surface p-8 rounded-lg border border-[var(--accent)]/20 flex flex-col">
-						<div class="w-16 h-16 flex items-center justify-center rounded-full bg-[var(--hex-violet)]/20 mb-6">
-							<svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="color: var(--hex-violet)">
+						<div class="w-16 h-16 flex items-center justify-center rounded-full bg-[var(--monochrome-accent)]/20 mb-6">
+							<svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="color: var(--monochrome-accent)">
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
 							</svg>
 						</div>
-						<h3 class="text-2xl font-bold mb-4" style="color: var(--blood-sigil)">Fair Compensation</h3>
+						<h3 class="text-2xl font-bold mb-4" style="color: var(--monochrome-accent)">Fair Compensation</h3>
 						<p class="text-[var(--text-secondary)] mb-6">
 							Earn up to 20x more per stream than major platforms. Our Stream2Own model ensures artists receive the majority of revenue with complete transparency.
 						</p>
@@ -55,12 +55,12 @@ import FairLabelDeals from "../components/FairLabelDeals.astro";
 
 					<!-- Benefit 2 -->
 					<div class="surface p-8 rounded-lg border border-[var(--accent)]/20 flex flex-col">
-						<div class="w-16 h-16 flex items-center justify-center rounded-full bg-[var(--hex-violet)]/20 mb-6">
-							<svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="color: var(--hex-violet)">
+						<div class="w-16 h-16 flex items-center justify-center rounded-full bg-[var(--monochrome-accent)]/20 mb-6">
+							<svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="color: var(--monochrome-accent)">
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 008 4.07M3 15.364c.64-1.319 1-2.8 1-4.364 0-1.457.39-2.823 1.07-4" />
 							</svg>
 						</div>
-						<h3 class="text-2xl font-bold mb-4" style="color: var(--blood-sigil)">Full Creative Control</h3>
+						<h3 class="text-2xl font-bold mb-4" style="color: var(--monochrome-accent)">Full Creative Control</h3>
 						<p class="text-[var(--text-secondary)] mb-6">
 							No algorithm interference, no censorship. Release your music on your terms, with complete control over pricing, availability, and presentation.
 						</p>
@@ -68,12 +68,12 @@ import FairLabelDeals from "../components/FairLabelDeals.astro";
 
 					<!-- Benefit 3 -->
 					<div class="surface p-8 rounded-lg border border-[var(--accent)]/20 flex flex-col">
-						<div class="w-16 h-16 flex items-center justify-center rounded-full bg-[var(--hex-violet)]/20 mb-6">
-							<svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="color: var(--hex-violet)">
+						<div class="w-16 h-16 flex items-center justify-center rounded-full bg-[var(--monochrome-accent)]/20 mb-6">
+							<svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="color: var(--monochrome-accent)">
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
 							</svg>
 						</div>
-						<h3 class="text-2xl font-bold mb-4" style="color: var(--blood-sigil)">Direct Fan Connection</h3>
+						<h3 class="text-2xl font-bold mb-4" style="color: var(--monochrome-accent)">Direct Fan Connection</h3>
 						<p class="text-[var(--text-secondary)] mb-6">
 							Build meaningful relationships with your fans through our platform. Access detailed analytics and connect directly with your most dedicated listeners.
 						</p>
@@ -104,11 +104,11 @@ import FairLabelDeals from "../components/FairLabelDeals.astro";
 								<div class="aspect-square rounded-lg overflow-hidden">
 									<img src="https://source.unsplash.com/random/600x600?recording+studio" alt="Artist uploading music" class="w-full h-full object-cover">
 								</div>
-								<div class="absolute -top-4 -left-4 w-16 h-16 flex items-center justify-center bg-[var(--hex-violet)] rounded-full text-white font-bold text-2xl">1</div>
+								<div class="absolute -top-4 -left-4 w-16 h-16 flex items-center justify-center bg-[var(--monochrome-accent)] rounded-full text-white font-bold text-2xl">1</div>
 							</div>
 						</div>
 						<div class="w-full md:w-3/5">
-							<h3 class="text-2xl font-bold mb-4" style="color: var(--blood-sigil)">Apply & Upload</h3>
+							<h3 class="text-2xl font-bold mb-4" style="color: var(--monochrome-accent)">Apply & Upload</h3>
 							<p class="text-[var(--text-secondary)] mb-6">
 								Complete our artist application form. Once approved, upload your music and artwork through our intuitive artist dashboard. We accept all metal subgenres and related extreme music.
 							</p>
@@ -125,11 +125,11 @@ import FairLabelDeals from "../components/FairLabelDeals.astro";
 								<div class="aspect-square rounded-lg overflow-hidden">
 									<img src="https://source.unsplash.com/random/600x600?control+panel" alt="Artist configuring settings" class="w-full h-full object-cover">
 								</div>
-								<div class="absolute -top-4 -right-4 w-16 h-16 flex items-center justify-center bg-[var(--hex-violet)] rounded-full text-white font-bold text-2xl">2</div>
+								<div class="absolute -top-4 -right-4 w-16 h-16 flex items-center justify-center bg-[var(--monochrome-accent)] rounded-full text-white font-bold text-2xl">2</div>
 							</div>
 						</div>
 						<div class="w-full md:w-3/5">
-							<h3 class="text-2xl font-bold mb-4" style="color: var(--blood-sigil)">Configure Your Terms</h3>
+							<h3 class="text-2xl font-bold mb-4" style="color: var(--monochrome-accent)">Configure Your Terms</h3>
 							<p class="text-[var(--text-secondary)] mb-6">
 								Set your pricing model, ownership thresholds, and distribution preferences. You decide how many streams it takes before a fan owns your music and what percentage of revenue you want to receive.
 							</p>
@@ -146,11 +146,11 @@ import FairLabelDeals from "../components/FairLabelDeals.astro";
 								<div class="aspect-square rounded-lg overflow-hidden">
 									<img src="https://source.unsplash.com/random/600x600?payment" alt="Artist receiving payment" class="w-full h-full object-cover">
 								</div>
-								<div class="absolute -top-4 -left-4 w-16 h-16 flex items-center justify-center bg-[var(--hex-violet)] rounded-full text-white font-bold text-2xl">3</div>
+								<div class="absolute -top-4 -left-4 w-16 h-16 flex items-center justify-center bg-[var(--monochrome-accent)] rounded-full text-white font-bold text-2xl">3</div>
 							</div>
 						</div>
 						<div class="w-full md:w-3/5">
-							<h3 class="text-2xl font-bold mb-4" style="color: var(--blood-sigil)">Get Paid Fairly</h3>
+							<h3 class="text-2xl font-bold mb-4" style="color: var(--monochrome-accent)">Get Paid Fairly</h3>
 							<p class="text-[var(--text-secondary)] mb-6">
 								Receive monthly payments for all streams and purchases. Monitor your earnings in real-time through your artist dashboard with complete transparency on every transaction.
 							</p>
@@ -185,7 +185,7 @@ import FairLabelDeals from "../components/FairLabelDeals.astro";
 								<img src="https://source.unsplash.com/random/100x100?metal+musician+1" alt="Artist profile" class="w-full h-full object-cover">
 							</div>
 							<div>
-								<h3 class="text-xl font-bold" style="color: var(--blood-sigil)">Alex Destroyer</h3>
+								<h3 class="text-xl font-bold" style="color: var(--monochrome-accent)">Alex Destroyer</h3>
 								<p class="text-[var(--text-secondary)]">Vocalist, Necrotic Void</p>
 							</div>
 						</div>
@@ -201,7 +201,7 @@ import FairLabelDeals from "../components/FairLabelDeals.astro";
 								<img src="https://source.unsplash.com/random/100x100?metal+musician+2" alt="Artist profile" class="w-full h-full object-cover">
 							</div>
 							<div>
-								<h3 class="text-xl font-bold" style="color: var(--blood-sigil)">Morgana Nightfall</h3>
+								<h3 class="text-xl font-bold" style="color: var(--monochrome-accent)">Morgana Nightfall</h3>
 								<p class="text-[var(--text-secondary)]">Bassist, Crimson Oath</p>
 							</div>
 						</div>
@@ -217,7 +217,7 @@ import FairLabelDeals from "../components/FairLabelDeals.astro";
 								<img src="https://source.unsplash.com/random/100x100?metal+musician+3" alt="Artist profile" class="w-full h-full object-cover">
 							</div>
 							<div>
-								<h3 class="text-xl font-bold" style="color: var(--blood-sigil)">Thor Hammerfist</h3>
+								<h3 class="text-xl font-bold" style="color: var(--monochrome-accent)">Thor Hammerfist</h3>
 								<p class="text-[var(--text-secondary)]">Drummer, Battle Axe</p>
 							</div>
 						</div>
@@ -233,7 +233,7 @@ import FairLabelDeals from "../components/FairLabelDeals.astro";
 								<img src="https://source.unsplash.com/random/100x100?metal+musician+4" alt="Artist profile" class="w-full h-full object-cover">
 							</div>
 							<div>
-								<h3 class="text-xl font-bold" style="color: var(--blood-sigil)">Lilith Shadowcraft</h3>
+								<h3 class="text-xl font-bold" style="color: var(--monochrome-accent)">Lilith Shadowcraft</h3>
 								<p class="text-[var(--text-secondary)]">Guitarist, Occult Ritual</p>
 							</div>
 						</div>
@@ -259,7 +259,7 @@ import FairLabelDeals from "../components/FairLabelDeals.astro";
 				<div class="space-y-4">
 					<details class="surface group rounded-lg">
 						<summary class="p-6 cursor-pointer list-none font-bold text-xl flex justify-between items-center">
-							<span style="color: var(--blood-sigil)">Do I need to sign any exclusive contracts?</span>
+							<span style="color: var(--monochrome-accent)">Do I need to sign any exclusive contracts?</span>
 							<svg class="w-6 h-6 transition-transform duration-300 group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
 							</svg>
@@ -273,7 +273,7 @@ import FairLabelDeals from "../components/FairLabelDeals.astro";
 
 					<details class="surface group rounded-lg">
 						<summary class="p-6 cursor-pointer list-none font-bold text-xl flex justify-between items-center">
-							<span style="color: var(--blood-sigil)">What does the revenue split look like?</span>
+							<span style="color: var(--monochrome-accent)">What does the revenue split look like?</span>
 							<svg class="w-6 h-6 transition-transform duration-300 group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
 							</svg>
@@ -287,7 +287,7 @@ import FairLabelDeals from "../components/FairLabelDeals.astro";
 
 					<details class="surface group rounded-lg">
 						<summary class="p-6 cursor-pointer list-none font-bold text-xl flex justify-between items-center">
-							<span style="color: var(--blood-sigil)">What formats do you accept for uploads?</span>
+							<span style="color: var(--monochrome-accent)">What formats do you accept for uploads?</span>
 							<svg class="w-6 h-6 transition-transform duration-300 group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
 							</svg>
@@ -301,7 +301,7 @@ import FairLabelDeals from "../components/FairLabelDeals.astro";
 
 					<details class="surface group rounded-lg">
 						<summary class="p-6 cursor-pointer list-none font-bold text-xl flex justify-between items-center">
-							<span style="color: var(--blood-sigil)">How often will I get paid?</span>
+							<span style="color: var(--monochrome-accent)">How often will I get paid?</span>
 							<svg class="w-6 h-6 transition-transform duration-300 group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
 							</svg>
@@ -315,7 +315,7 @@ import FairLabelDeals from "../components/FairLabelDeals.astro";
 
 					<details class="surface group rounded-lg">
 						<summary class="p-6 cursor-pointer list-none font-bold text-xl flex justify-between items-center">
-							<span style="color: var(--blood-sigil)">Is there any cost to join as an artist?</span>
+							<span style="color: var(--monochrome-accent)">Is there any cost to join as an artist?</span>
 							<svg class="w-6 h-6 transition-transform duration-300 group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
 							</svg>
@@ -364,7 +364,7 @@ import FairLabelDeals from "../components/FairLabelDeals.astro";
 	/* Form styling */
 	input:focus, textarea:focus, select:focus {
 		outline: none;
-		box-shadow: 0 0 0 2px var(--hex-violet);
+		box-shadow: 0 0 0 2px var(--monochrome-accent);
 	}
 
 	/* FAQ Animations */

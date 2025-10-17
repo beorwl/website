@@ -1,0 +1,152 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../layouts/Navigation.astro';
+import Footer from "../layouts/Footer.astro";
+---
+
+<Layout title="Coming Soon - BEORWL | Join The Waitlist">
+	<main class="min-h-screen">
+		<Navigation />
+
+		<!-- Coming Soon Hero Section -->
+		<section class="min-h-[90vh] flex items-center justify-center p-6 relative">
+			<!-- Animated occult background -->
+			<div class="hero-bg">
+				<div class="symbol s1 large">☥</div>
+				<div class="symbol s2">✧</div>
+				<div class="symbol s3 large">⚸</div>
+				<div class="symbol s6 small">☉</div>
+				<div class="symbol s7 small">☿</div>
+			</div>
+
+			<div class="max-w-3xl mx-auto text-center relative">
+				<!-- Badge -->
+				<div class="mb-6 flex justify-center">
+					<span class="px-3 py-1 rounded-full text-[10px] md:text-xs tracking-widest uppercase bg-[var(--bg-surface)] text-[var(--accent)] border border-[var(--accent)]/40">
+						Launching Soon
+					</span>
+				</div>
+
+				<!-- Main Heading -->
+				<h1 class="text-5xl md:text-7xl mb-6 font-[Secular_One] text-monochrome leading-tight">
+					<span class="block">Time To Stream Fair</span>
+				</h1>
+
+				<!-- Occult symbol separator -->
+				<div class="mx-auto mb-8 flex items-center justify-center gap-2 text-[var(--accent)]/80 select-none" aria-hidden="true">
+                    <span class="text-xl md:text-2xl">☥</span>
+                    <span class="text-xl md:text-2xl">✧</span>
+                    <span class="text-xl md:text-2xl">⚸</span>
+                    <span class="text-xl md:text-2xl">☉</span>
+                    <span class="text-xl md:text-2xl">☿</span>
+				</div>
+
+				<!-- Description -->
+				<p class="text-lg md:text-xl mb-12 text-[var(--text-secondary)] max-w-2xl mx-auto leading-relaxed">
+					Be the first to experience a streaming platform that actually gives a fuck about artists. Join our waitlist and get early access when we launch.
+				</p>
+
+				<!-- Waitlist Form -->
+				<div class="max-w-md mx-auto">
+					<form id="waitlist-form" class="space-y-4">
+						<div class="flex flex-col sm:flex-row gap-3">
+							<input
+								type="email"
+								name="email"
+								id="email-input"
+								placeholder="Enter your email"
+								required
+								class="flex-1 px-6 py-4 rounded-lg bg-[var(--bg-surface)] border border-[var(--accent)]/30 text-[var(--text-primary)] placeholder:text-[var(--text-secondary)] focus:outline-none focus:border-[var(--accent)] transition-colors"
+							/>
+							<button
+								type="submit"
+								class="btn btn-primary whitespace-nowrap px-8 py-4"
+							>
+								Join Waitlist
+							</button>
+						</div>
+
+						<!-- Success/Error Messages -->
+						<div id="form-message" class="hidden text-sm mt-3"></div>
+					</form>
+
+					<p class="text-sm text-[var(--text-secondary)] mt-6">
+						No spam. No bullshit. Just updates on when we're ready to fuck up the establishment.
+					</p>
+				</div>
+
+			</div>
+		</section>
+
+		<Footer />
+	</main>
+</Layout>
+
+<script>
+	// Handle form submission
+	const form = document.getElementById('waitlist-form') as HTMLFormElement;
+	const emailInput = document.getElementById('email-input') as HTMLInputElement;
+	const formMessage = document.getElementById('form-message') as HTMLDivElement;
+
+	form?.addEventListener('submit', async (e) => {
+		e.preventDefault();
+
+		const email = emailInput.value.trim();
+
+		if (!email) {
+			showMessage('Please enter a valid email address.', 'error');
+			return;
+		}
+
+		// Disable the form during submission
+		const submitButton = form.querySelector('button[type="submit"]') as HTMLButtonElement;
+		const originalButtonText = submitButton.textContent;
+		submitButton.disabled = true;
+		submitButton.textContent = 'Joining...';
+
+		try {
+			// TODO: Replace with your actual API endpoint
+			// For now, we'll simulate a successful submission
+			await new Promise(resolve => setTimeout(resolve, 1000));
+
+			// Simulate success
+			showMessage('🤘 You\'re on the list! Check your email for confirmation.', 'success');
+			emailInput.value = '';
+
+			// Store email in localStorage for demo purposes
+			const waitlist = JSON.parse(localStorage.getItem('waitlist') || '[]');
+			waitlist.push({ email, timestamp: new Date().toISOString() });
+			localStorage.setItem('waitlist', JSON.stringify(waitlist));
+
+		} catch (error) {
+			showMessage('Something went wrong. Please try again.', 'error');
+		} finally {
+			submitButton.disabled = false;
+			submitButton.textContent = originalButtonText;
+		}
+	});
+
+	function showMessage(message: string, type: 'success' | 'error') {
+		formMessage.textContent = message;
+		formMessage.className = `text-sm mt-3 ${type === 'success' ? 'text-green-500' : 'text-red-500'}`;
+		formMessage.classList.remove('hidden');
+
+		// Hide message after 5 seconds
+		setTimeout(() => {
+			formMessage.classList.add('hidden');
+		}, 5000);
+	}
+</script>
+
+<style>
+	/* Additional styles for the coming soon page */
+	input:focus {
+		outline: none;
+		box-shadow: 0 0 0 2px var(--accent);
+	}
+
+	input::placeholder {
+		opacity: 0.6;
+	}
+</style>
+

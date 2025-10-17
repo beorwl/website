@@ -4,7 +4,7 @@ const { pathname } = Astro.url;
 <header class="sticky top-0 z-50 bg-[var(--bg-primary)]/90">
     <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         <div class="flex items-center gap-8">
-            <a href="/" class="flex items-center gap-1 font-[Orbitron] text-lg font-semibold tracking-wide">
+            <a href="/public" class="flex items-center gap-1 font-[Orbitron] text-lg font-semibold tracking-wide">
                 <div class="flex items-center justify-center w-6 h-6 rounded-lg bg-[var(--monochrome-text)] text-[var(--monochrome-bg)] text-base font-bold">
                     O
                 </div>
@@ -91,7 +91,7 @@ const { pathname } = Astro.url;
             <a href="/for-artists-and-labels" class="btn btn-secondary">
                 For Artists & Labels
             </a>
-            <a href="/#waitlist" class="btn btn-primary">Open Streaming App</a>
+            <a href="/public#waitlist" class="btn btn-primary">Download App</a>
 
         </div>
     </div>
@@ -141,7 +141,7 @@ const { pathname } = Astro.url;
                 </a>
             </div>
             <div class="pt-2">
-                <a href="/#waitlist" class="btn btn-primary w-full justify-center">Join Waitlist</a>
+                <a href="/public#waitlist" class="btn btn-primary w-full justify-center">Join Waitlist</a>
             </div>
         </nav>
     </div>

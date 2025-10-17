@@ -7,30 +7,22 @@ const currentYear = new Date().getFullYear();
 
     <!-- Main footer content -->
     <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+
+
+      <!-- Brand section -->
         <div>
             <h4 class="text-sm font-semibold text-[var(--text-primary)] mb-4 uppercase tracking-wider">For Artists</h4>
             <nav class="flex flex-col space-y-2">
                 <a href="/for-artists-and-labels" class="text-sm text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors">Upload Music</a>
-                <a href="/about" class="text-sm text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors">Anonym Labeldeal Check</a>
+                <a href="/label-deal-check" class="text-sm text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors">Anonym Labeldeal Check</a>
             </nav>
         </div>
-
-      <!-- Brand section -->
-      <div class="md:col-span-1">
-          <h4 class="text-sm font-semibold text-[var(--text-primary)] mb-4 uppercase tracking-wider">For Fans</h4>
-          <nav class="flex flex-col space-y-2">
-              <a href="/for-artists-and-labels" class="text-sm text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors">Download App</a>
-          </nav>
-      </div>
-
-      <!-- Resources navigation -->
-
 
       <!-- Support navigation -->
       <div>
         <h4 class="text-sm font-semibold text-[var(--text-primary)] mb-4 uppercase tracking-wider">For Labels</h4>
         <nav class="flex flex-col space-y-2">
-          <a href="#" class="text-sm text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors">Upload Your Artists</a>
+          <a href="/for-artists-and-labels" class="text-sm text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors">Upload Your Artists</a>
         </nav>
       </div>
 
@@ -60,17 +52,24 @@ const currentYear = new Date().getFullYear();
           </a>
         </div>
       </div>
+
+        <div class="text-center">
+            <div class="rounded-lg overflow-hidden h-[200px]">
+                <img src="../../resources/images/fuck-major-streaming.png" alt="Metal concert crowd" class="w-full h-full object-cover">
+            </div>
+            Artist First. Fuck Capitalism. No AI Bullshit.
+        </div>
     </div>
 
     <!-- Bottom bar with copyright and legal -->
-    <div class="pt-8 border-t border-[var(--monochrome-text)]/10 flex flex-col md:flex-row justify-between items-center">
+    <div class="pt-8 border-t border-[var(--monochrome-text)]/10 flex flex-col md:flex-row justify-between">
       <div class="mb-4 md:mb-0">
-        <p class="text-sm text-[var(--text-secondary)]">© {currentYear} ORWL. Artist First. Fuck Capitalism. No AI Bullshit.</p>
+        <p class="text-sm text-[var(--text-secondary)]">© {currentYear} ORWL</p>
       </div>
       <nav class="flex space-x-6 text-xs">
-        <a href="#" class="text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors">Imprint</a>
-        <a href="#" class="text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors">Terms</a>
-        <a href="#" class="text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors">Privacy</a>
+        <a href="/about" class="text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors">Imprint</a>
+        <a href="/about" class="text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors">Terms</a>
+        <a href="/about" class="text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors">Privacy</a>
       </nav>
     </div>
   </div>

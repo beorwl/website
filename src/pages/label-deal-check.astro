@@ -1,0 +1,477 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../layouts/Navigation.astro';
+import Footer from '../layouts/Footer.astro';
+---
+
+<Layout title="ORWL - Labeldeck Check">
+	<main>
+		<Navigation />
+
+		<!-- Hero Section -->
+		<section class="py-24 px-6">
+			<div class="max-w-5xl mx-auto text-center">
+				<span class="px-3 py-1 rounded-full text-[10px] md:text-xs tracking-widest uppercase bg-[var(--bg-surface)] text-[var(--accent)] border border-[var(--accent)]/40 inline-block mb-4">
+					Anonym & Free Check
+				</span>
+				<h1 class="text-5xl md:text-7xl font-[Secular_One] mb-6">Is Your Labeldeal Fair?</h1>
+				<p class="text-[var(--text-secondary)] max-w-2xl mx-auto text-lg">
+					Get your label contract reviewed by industry experts and experienced artists — completely free, anonymous, and secure.
+				</p>
+
+
+			</div>
+		</section>
+
+
+
+        <!-- How It Works Section -->
+        <section class="py-24 px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-[Secular_One] mb-4">How It Works</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <div class="text-center">
+                        <div class="w-16 h-16 mx-auto flex items-center justify-center rounded-full bg-[var(--accent)]/20 mb-4">
+                            <span class="text-2xl font-bold text-[var(--accent)]">1</span>
+                        </div>
+                        <h3 class="text-lg font-bold mb-2 text-[var(--text-primary)]">Upload</h3>
+                        <p class="text-sm text-[var(--text-secondary)]">Submit your contract anonymously through our secure form</p>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="w-16 h-16 mx-auto flex items-center justify-center rounded-full bg-[var(--accent)]/20 mb-4">
+                            <span class="text-2xl font-bold text-[var(--accent)]">2</span>
+                        </div>
+                        <h3 class="text-lg font-bold mb-2 text-[var(--text-primary)]">Review</h3>
+                        <p class="text-sm text-[var(--text-secondary)]">Our experts analyze every clause and term in your contract</p>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="w-16 h-16 mx-auto flex items-center justify-center rounded-full bg-[var(--accent)]/20 mb-4">
+                            <span class="text-2xl font-bold text-[var(--accent)]">3</span>
+                        </div>
+                        <h3 class="text-lg font-bold mb-2 text-[var(--text-primary)]">Report</h3>
+                        <p class="text-sm text-[var(--text-secondary)]">Receive a detailed report with our assessment and recommendations</p>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="w-16 h-16 mx-auto flex items-center justify-center rounded-full bg-[var(--accent)]/20 mb-4">
+                            <span class="text-2xl font-bold text-[var(--accent)]">4</span>
+                        </div>
+                        <h3 class="text-lg font-bold mb-2 text-[var(--text-primary)]">Decide</h3>
+                        <p class="text-sm text-[var(--text-secondary)]">Make an informed decision about your contract</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="py-24 px-6 bg-[var(--bg-surface)]">
+            <div class="max-w-5xl mx-auto">
+
+
+                <!-- Two-column layout -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <!-- Left column: Content -->
+                    <div class="space-y-6">
+
+                        <div class="max-w-3xl mx-auto">
+                            <div class="text-center mb-12">
+                                <h2 class="text-3xl md:text-4xl font-[Secular_One] mb-4">Submit Your Contract</h2>
+                                <p class="text-[var(--text-secondary)] max-w-2xl mx-auto">
+                                    Upload your contract securely. All submissions are encrypted and completely anonymous.
+                                </p>
+                            </div>
+
+                            <div class="surface p-8 rounded-lg border border-[var(--accent)]/20">
+                                <form id="contract-upload-form" class="space-y-6">
+                                    <!-- File Upload -->
+                                    <div>
+                                        <label class="block text-sm font-medium mb-2 text-[var(--text-primary)]">
+                                            Contract Document (PDF, DOC, DOCX)
+                                        </label>
+                                        <div class="border-2 border-dashed border-[var(--accent)]/30 rounded-lg p-8 text-center hover:border-[var(--accent)]/50 transition-colors cursor-pointer" id="dropzone">
+                                            <input type="file" id="file-input" accept=".pdf,.doc,.docx" class="hidden" required />
+                                            <div id="upload-prompt">
+
+                                                <p class="text-[var(--text-primary)] mb-2">Click to upload or drag and drop</p>
+                                                <p class="text-sm text-[var(--text-secondary)]">PDF, DOC, DOCX up to 10MB</p>
+                                            </div>
+                                            <div id="file-info" class="hidden">
+
+                                                <p class="text-[var(--text-primary)] font-medium" id="file-name"></p>
+                                                <button type="button" id="remove-file" class="text-sm text-[var(--accent)] mt-2 hover:underline">Remove file</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Optional Context -->
+                                    <div>
+                                        <label for="context" class="block text-sm font-medium mb-2 text-[var(--text-primary)]">
+                                            Additional Context (Optional)
+                                        </label>
+                                        <textarea
+                                                id="context"
+                                                rows="4"
+                                                class="w-full px-4 py-3 bg-[var(--bg-primary)] border border-[var(--accent)]/30 rounded-lg text-[var(--text-primary)] focus:border-[var(--accent)] focus:outline-none"
+                                                placeholder="Any specific concerns or questions about the contract? (This remains anonymous)"
+                                        ></textarea>
+                                    </div>
+
+                                    <!-- Contact Method -->
+                                    <div>
+                                        <label for="contact" class="block text-sm font-medium mb-2 text-[var(--text-primary)]">
+                                            How should we send you the results?
+                                        </label>
+                                        <select
+                                                id="contact-method"
+                                                class="w-full px-4 py-3 bg-[var(--bg-primary)] border border-[var(--accent)]/30 rounded-lg text-[var(--text-primary)] focus:border-[var(--accent)] focus:outline-none"
+                                                required
+                                        >
+                                            <option value="">Select a method...</option>
+                                            <option value="email">Email (anonymous email accepted)</option>
+                                            <option value="discord">Discord username</option>
+                                            <option value="telegram">Telegram username</option>
+                                        </select>
+                                    </div>
+
+                                    <div id="contact-input-container" class="hidden">
+                                        <input
+                                                type="text"
+                                                id="contact-input"
+                                                class="w-full px-4 py-3 bg-[var(--bg-primary)] border border-[var(--accent)]/30 rounded-lg text-[var(--text-primary)] focus:border-[var(--accent)] focus:outline-none"
+                                                placeholder="Enter your contact information"
+                                        />
+                                    </div>
+
+                                    <!-- Privacy Note -->
+                                    <div class="bg-[var(--bg-primary)] p-4 rounded-lg border border-[var(--accent)]/20">
+                                        <div class="flex gap-3">
+
+                                            <div class="text-sm text-[var(--text-secondary)]">
+                                                <p class="font-semibold text-[var(--text-primary)] mb-1">Your Privacy is Guaranteed</p>
+                                                <ul class="space-y-1 list-disc list-inside">
+                                                    <li>We never ask for your name, band name, or label name</li>
+                                                    <li>Your contract is encrypted during upload and storage</li>
+                                                    <li>Results are sent only to your chosen contact method</li>
+                                                    <li>All data is deleted after 30 days</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Submit Button -->
+                                    <button type="submit" class="btn btn-primary w-full text-lg py-4">
+                                        Submit Contract for Review
+                                    </button>
+
+                                    <p class="text-center text-sm text-[var(--text-secondary)]">
+                                        You'll receive a detailed analysis within 5-7 business days
+                                    </p>
+                                </form>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <!-- Right column: Image -->
+                    <div class="relative">
+
+                        <div class=" p-6 rounded-lg">
+                            <div class="flex gap-4">
+                                <div class="flex-shrink-0">
+                                    <div class="w-8 h-8 flex items-center justify-center rounded-full bg-[var(--accent)]/20">
+                                        <span class="text-[var(--accent)] font-bold">1</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold mb-2 text-[var(--text-primary)]">Revenue Split & Royalties</h3>
+                                    <p class="text-[var(--text-secondary)]">
+                                        We examine the percentage you receive from streams, sales, merchandise, and live performances. Is it industry standard or exploitative?
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class=" p-6 rounded-lg">
+                            <div class="flex gap-4">
+                                <div class="flex-shrink-0">
+                                    <div class="w-8 h-8 flex items-center justify-center rounded-full bg-[var(--accent)]/20">
+                                        <span class="text-[var(--accent)] font-bold">2</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold mb-2 text-[var(--text-primary)]">Contract Duration & Options</h3>
+                                    <p class="text-[var(--text-secondary)]">
+                                        How long are you locked in? Are there automatic renewals? Can you terminate if things go wrong?
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class=" p-6 rounded-lg">
+                            <div class="flex gap-4">
+                                <div class="flex-shrink-0">
+                                    <div class="w-8 h-8 flex items-center justify-center rounded-full bg-[var(--accent)]/20">
+                                        <span class="text-[var(--accent)] font-bold">3</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold mb-2 text-[var(--text-primary)]">Rights & Ownership</h3>
+                                    <p class="text-[var(--text-secondary)]">
+                                        Who owns your master recordings? Your publishing rights? Your merchandise designs? This is crucial.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class=" p-6 rounded-lg">
+                            <div class="flex gap-4">
+                                <div class="flex-shrink-0">
+                                    <div class="w-8 h-8 flex items-center justify-center rounded-full bg-[var(--accent)]/20">
+                                        <span class="text-[var(--accent)] font-bold">4</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold mb-2 text-[var(--text-primary)]">Recoupment & Advances</h3>
+                                    <p class="text-[var(--text-secondary)]">
+                                        If they're offering an advance, what are the terms for paying it back? Are the recoupment terms reasonable?
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class=" p-6 rounded-lg">
+                            <div class="flex gap-4">
+                                <div class="flex-shrink-0">
+                                    <div class="w-8 h-8 flex items-center justify-center rounded-full bg-[var(--accent)]/20">
+                                        <span class="text-[var(--accent)] font-bold">5</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold mb-2 text-[var(--text-primary)]">Transparency & Reporting</h3>
+                                    <p class="text-[var(--text-secondary)]">
+                                        Are you guaranteed regular sales reports? Can you audit their books? Transparency is everything.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class=" p-6 rounded-lg">
+                            <div class="flex gap-4">
+                                <div class="flex-shrink-0">
+                                    <div class="w-8 h-8 flex items-center justify-center rounded-full bg-[var(--accent)]/20">
+                                        <span class="text-[var(--accent)] font-bold">6</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold mb-2 text-[var(--text-primary)]">Red Flags & Exploitative Clauses</h3>
+                                    <p class="text-[var(--text-secondary)]">
+                                        We identify predatory terms, hidden fees, and any clauses that could trap you in an unfair arrangement.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+		<!-- Testimonials / Trust Section -->
+		<section class="py-24 px-6">
+			<div class="max-w-4xl mx-auto">
+				<div class="text-center mb-12">
+					<h2 class="text-3xl md:text-4xl font-[Secular_One] mb-4">Why Trust Us?</h2>
+				</div>
+
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+					<div class="surface p-6 rounded-lg border border-[var(--accent)]/20">
+						<h3 class="text-xl font-bold mb-3 text-[var(--text-primary)]">Community-Driven</h3>
+						<p class="text-[var(--text-secondary)]">
+							We're part of the metal community, not corporate lawyers looking to profit from your success. We genuinely want to see artists protected from exploitation.
+						</p>
+					</div>
+
+					<div class="surface p-6 rounded-lg border border-[var(--accent)]/20">
+						<h3 class="text-xl font-bold mb-3 text-[var(--text-primary)]">Real Experience</h3>
+						<p class="text-[var(--text-secondary)]">
+							Our review team includes artists who've signed good deals, bad deals, and everything in between. We know what to look for because we've lived it.
+						</p>
+					</div>
+
+					<div class="surface p-6 rounded-lg border border-[var(--accent)]/20">
+						<h3 class="text-xl font-bold mb-3 text-[var(--text-primary)]">No Agenda</h3>
+						<p class="text-[var(--text-secondary)]">
+							We don't represent labels, we don't sell legal services, and we're not trying to recruit you. Our only goal is fair treatment for artists.
+						</p>
+					</div>
+
+					<div class="surface p-6 rounded-lg border border-[var(--accent)]/20">
+						<h3 class="text-xl font-bold mb-3 text-[var(--text-primary)]">Nonprofit Mission</h3>
+						<p class="text-[var(--text-secondary)]">
+							As a registered nonprofit, we're legally bound to serve the community, not shareholders. This service will always be free.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- FAQ Section -->
+		<section class="py-24 px-6">
+			<div class="max-w-3xl mx-auto">
+				<div class="text-center mb-12">
+					<h2 class="text-3xl md:text-4xl font-[Secular_One] mb-4">Common Questions</h2>
+				</div>
+
+				<div class="space-y-4">
+					<details class="surface group rounded-lg">
+						<summary class="p-6 cursor-pointer list-none font-bold text-lg flex justify-between items-center">
+							<span class="text-[var(--text-primary)]">Is this really free?</span>
+						</summary>
+						<div class="px-6 pb-6 text-[var(--text-secondary)]">
+							<p>Yes, completely free. No hidden fees, no upsells, no obligations. This is our contribution to protecting artists in the metal community.</p>
+						</div>
+					</details>
+
+					<details class="surface group rounded-lg">
+						<summary class="p-6 cursor-pointer list-none font-bold text-lg flex justify-between items-center">
+							<span class="text-[var(--text-primary)]">How anonymous is it really?</span>
+							</summary>
+						<div class="px-6 pb-6 text-[var(--text-secondary)]">
+							<p>We never ask for identifying information. You can use a burner email, Discord alt, or any anonymous contact method. Our team reviews the contract without knowing who you are or which label it's from.</p>
+						</div>
+					</details>
+
+					<details class="surface group rounded-lg">
+						<summary class="p-6 cursor-pointer list-none font-bold text-lg flex justify-between items-center">
+							<span class="text-[var(--text-primary)]">Can you provide legal advice?</span>
+						</summary>
+						<div class="px-6 pb-6 text-[var(--text-secondary)]">
+							<p>We provide educational feedback and highlight concerning clauses, but we're not lawyers and this isn't legal advice. For legal representation, you'll need to consult a lawyer licensed in your jurisdiction.</p>
+						</div>
+					</details>
+
+					<details class="surface group rounded-lg">
+						<summary class="p-6 cursor-pointer list-none font-bold text-lg flex justify-between items-center">
+							<span class="text-[var(--text-primary)]">How long does the review take?</span>
+						</summary>
+						<div class="px-6 pb-6 text-[var(--text-secondary)]">
+							<p>Typically 5-7 business days. Complex contracts or high volume may take longer, but we'll always get back to you with a thorough analysis.</p>
+						</div>
+					</details>
+
+					<details class="surface group rounded-lg">
+						<summary class="p-6 cursor-pointer list-none font-bold text-lg flex justify-between items-center">
+							<span class="text-[var(--text-primary)]">What if I've already signed?</span>
+						</summary>
+						<div class="px-6 pb-6 text-[var(--text-secondary)]">
+							<p>We can still review it and help you understand what you've committed to. Depending on the terms and your jurisdiction, there may be options for renegotiation or early termination.</p>
+						</div>
+					</details>
+				</div>
+			</div>
+		</section>
+
+		<Footer />
+	</main>
+</Layout>
+
+<script>
+	// File upload handling
+	const fileInput = document.getElementById('file-input') as HTMLInputElement;
+	const dropzone = document.getElementById('dropzone');
+	const uploadPrompt = document.getElementById('upload-prompt');
+	const fileInfo = document.getElementById('file-info');
+	const fileName = document.getElementById('file-name');
+	const removeFileBtn = document.getElementById('remove-file');
+	const contactMethod = document.getElementById('contact-method') as HTMLSelectElement;
+	const contactInputContainer = document.getElementById('contact-input-container');
+	const contactInput = document.getElementById('contact-input') as HTMLInputElement;
+	const form = document.getElementById('contract-upload-form') as HTMLFormElement;
+
+	// Click to upload
+	dropzone?.addEventListener('click', () => {
+		fileInput?.click();
+	});
+
+	// File selection
+	fileInput?.addEventListener('change', (e) => {
+		const file = (e.target as HTMLInputElement).files?.[0];
+		if (file) {
+			displayFile(file);
+		}
+	});
+
+	// Drag and drop
+	dropzone?.addEventListener('dragover', (e) => {
+		e.preventDefault();
+		dropzone.classList.add('border-[var(--accent)]');
+	});
+
+	dropzone?.addEventListener('dragleave', () => {
+		dropzone.classList.remove('border-[var(--accent)]');
+	});
+
+	dropzone?.addEventListener('drop', (e) => {
+		e.preventDefault();
+		dropzone.classList.remove('border-[var(--accent)]');
+		const file = e.dataTransfer?.files?.[0];
+		if (file) {
+			displayFile(file);
+		}
+	});
+
+	function displayFile(file: File) {
+		if (fileName) fileName.textContent = file.name;
+		uploadPrompt?.classList.add('hidden');
+		fileInfo?.classList.remove('hidden');
+	}
+
+	removeFileBtn?.addEventListener('click', (e) => {
+		e.stopPropagation();
+		if (fileInput) fileInput.value = '';
+		uploadPrompt?.classList.remove('hidden');
+		fileInfo?.classList.add('hidden');
+	});
+
+	// Contact method handling
+	contactMethod?.addEventListener('change', (e) => {
+		const method = (e.target as HTMLSelectElement).value;
+		if (method) {
+			contactInputContainer?.classList.remove('hidden');
+			if (contactInput) {
+				contactInput.required = true;
+				contactInput.placeholder = method === 'email'
+					? 'your-email@example.com (anonymous email services welcome)'
+					: method === 'discord'
+					? 'YourDiscordUsername#1234'
+					: '@yourtelegram';
+			}
+		} else {
+			contactInputContainer?.classList.add('hidden');
+			if (contactInput) contactInput.required = false;
+		}
+	});
+
+	// Form submission
+	form?.addEventListener('submit', async (e) => {
+		e.preventDefault();
+
+		// In a real implementation, this would upload to a secure backend
+		alert('This is a demo. In production, this would securely upload your contract to our encrypted storage and notify our review team. You would receive a confirmation and tracking ID.');
+
+		// Reset form
+		form.reset();
+		uploadPrompt?.classList.remove('hidden');
+		fileInfo?.classList.add('hidden');
+		contactInputContainer?.classList.add('hidden');
+	});
+</script>
+

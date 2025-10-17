@@ -9,28 +9,26 @@ interface Props {
 // Set default values
 const {
   minStreams = 1,
-  maxStreams = 8,
+  maxStreams = 9,
   initialStreams = 1
 } = Astro.props;
 
-// Calculate costs based on the pattern:
-// 1x = 0,00€
-// 2x = 0,02€
-// 3x = 0,04€
-// 4x = 0,08€
-// 5x = 0,16€
-// 6x = 0,32€
-// 7x = 0,64€
-// 8x = 1,28€
-const calculateCost = (streams) => {
+const calculateCost = (streams: number): number | string => {
+  if (streams > 8) return "Free Forever";
   if (streams === 1) return 0;
   if (streams === 2) return 0.02;
-    if (streams === 3) return 0.04;
-    if (streams === 4) return 0.08;
-    if (streams === 5) return 0.16;
-    if (streams === 6) return 0.32;
-    if (streams === 7) return 0.64;
-    if (streams === 8) return 1.28;
+  if (streams === 3) return 0.04;
+  if (streams === 4) return 0.08;
+  if (streams === 5) return 0.16;
+  if (streams === 6) return 0.32;
+  if (streams === 7) return 0.64;
+  if (streams === 8) return 1.28;
+  return 0;
+};
+
+const formatCost = (cost: number | string): string => {
+  if (typeof cost === "string") return cost;
+  return `${cost.toFixed(2).replace('.', ',')}€`;
 };
 ---
 
@@ -38,7 +36,7 @@ const calculateCost = (streams) => {
   <div class="flex flex-col">
     <div>
       <label for="stream-count" class="block text-sm font-medium mb-1">
-        Number of streams: <span id="stream-display">{initialStreams}</span>
+        Number of streams per song: <span id="stream-display">{initialStreams}</span>
       </label>
       <input
         type="range"
@@ -46,17 +44,16 @@ const calculateCost = (streams) => {
         min={minStreams}
         max={maxStreams}
         value={initialStreams}
-        class="w-full bg-gray-200 rounded-lg appearance-none cursor-pointer"
+        class="w-full background-surface rounded-lg appearance-none cursor-pointer"
       />
     </div>
 
-    <div class="result-container p-4  rounded-md">
-      <p class="text-sm mb-2">If you stream this song:</p>
+    <div class="result-container rounded-md mt-2">
       <div class="flex items-baseline">
         <span id="stream-result" class="text-3xl font-bold">{initialStreams}x</span>
         <span class="mx-2">=</span>
         <span id="cost-result" class="text-3xl font-bold">
-          {calculateCost(initialStreams).toFixed(2).replace('.', ',')}€
+          {formatCost(calculateCost(initialStreams))}
         </span>
       </div>
     </div>
@@ -87,7 +84,7 @@ const calculateCost = (streams) => {
     appearance: none;
     width: 20px;
     height: 20px;
-    background-color: #4B5563;
+    background-color: #ED4341;
     border-radius: 50%;
     cursor: pointer;
   }
@@ -95,7 +92,7 @@ const calculateCost = (streams) => {
   input[type="range"]::-moz-range-thumb {
     width: 20px;
     height: 20px;
-    background-color: #4B5563;
+    background-color: #ED4341;
     border-radius: 50%;
     cursor: pointer;
   }
@@ -103,13 +100,14 @@ const calculateCost = (streams) => {
 
 <script>
   // Get DOM elements
-  const slider = document.getElementById('stream-count');
+  const slider = document.getElementById('stream-count') as HTMLInputElement;
   const streamDisplay = document.getElementById('stream-display');
   const streamResult = document.getElementById('stream-result');
   const costResult = document.getElementById('cost-result');
 
   // Calculate cost function (must match the server-side one)
-  const calculateCost = (streams) => {
+  const calculateCost = (streams: number): number | string => {
+      if (streams > 8) return "Free Forever";
       if (streams === 1) return 0;
       if (streams === 2) return 0.02;
       if (streams === 3) return 0.04;
@@ -118,16 +116,24 @@ const calculateCost = (streams) => {
       if (streams === 6) return 0.32;
       if (streams === 7) return 0.64;
       if (streams === 8) return 1.28;
+      return 0;
+  };
+
+  const formatCost = (cost: number | string): string => {
+    if (typeof cost === "string") return cost;
+    return `${cost.toFixed(2).replace('.', ',')}€`;
   };
 
   // Update display when slider changes
-  slider.addEventListener('input', () => {
-    const streams = parseInt(slider.value);
-    const cost = calculateCost(streams);
+  if (slider) {
+    slider.addEventListener('input', () => {
+      const streams = parseInt(slider.value);
+      const cost = calculateCost(streams);
 
-    // Update DOM elements
-    streamDisplay.textContent = streams;
-    streamResult.textContent = `${streams}x`;
-    costResult.textContent = `${cost.toFixed(2).replace('.', ',')}€`;
-  });
+      // Update DOM elements
+      if (streamDisplay) streamDisplay.textContent = String(streams);
+      if (streamResult) streamResult.textContent = `${streams}x`;
+      if (costResult) costResult.textContent = formatCost(cost);
+    });
+  }
 </script>

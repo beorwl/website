@@ -1,0 +1,65 @@
+---
+import Icon from '../ui/Icon.astro';
+---
+
+<section class="py-24 px-6 bg-[var(--bg-surface)]">
+  <div class="max-w-5xl mx-auto">
+    <div class="surface p-12 rounded-lg border-2 border-[var(--accent)]/40">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <!-- Left column: Content -->
+        <div>
+          <span class="px-3 py-1 rounded-full text-[10px] md:text-xs tracking-widest uppercase bg-[var(--bg-primary)] text-[var(--accent)] border border-[var(--accent)]/40 inline-block mb-4">
+            Free For Artists
+          </span>
+          <h2 class="text-3xl md:text-4xl font-[Secular_One] mb-4">
+            Not Sure If Your Label Deal Is Fair?
+          </h2>
+          <p class="text-[var(--text-secondary)] mb-6">
+            Get your contract reviewed by experienced artists and industry experts — completely anonymous, secure, and free.
+          </p>
+
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-start gap-3">
+              <Icon name="check" class="w-5 h-5 flex-shrink-0 text-[var(--accent)] mt-1" />
+              <span class="text-[var(--text-secondary)]">Expert analysis of royalty splits, rights, and terms</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <Icon name="check" class="w-5 h-5 flex-shrink-0 text-[var(--accent)] mt-1" />
+              <span class="text-[var(--text-secondary)]">Completely anonymous — no names required</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <Icon name="check" class="w-5 h-5 flex-shrink-0 text-[var(--accent)] mt-1" />
+              <span class="text-[var(--text-secondary)]">Detailed report within 5-7 business days</span>
+            </li>
+          </ul>
+
+          <a href="/label-deal-check" class="btn btn-primary inline-flex items-center gap-2">
+            Check Your Contract Now
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+        </div>
+
+        <!-- Right column: Visual -->
+        <div class="relative">
+          <div class="aspect-square rounded-lg overflow-hidden bg-[var(--bg-primary)] border border-[var(--accent)]/20 flex items-center justify-center p-8">
+            <div class="text-center">
+              <div class="w-24 h-24 mx-auto flex items-center justify-center rounded-full bg-[var(--accent)]/20 mb-6">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="color: var(--accent)">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+              </div>
+              <p class="text-[var(--text-secondary)] text-sm">
+                Upload your contract securely and get expert feedback on whether it's fair or exploitative.
+              </p>
+            </div>
+          </div>
+          <!-- Decorative element -->
+          <div class="absolute -bottom-4 -right-4 w-32 h-32 border-2 border-[var(--accent)]/20 rounded-lg -z-10"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

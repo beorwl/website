@@ -1,47 +1,39 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Navigation from '../components/Navigation.astro';
+import Navigation from '../layouts/Navigation.astro';
 import ManifestoNav from '../components/ManifestoNav.astro';
-import Footer from "../components/Footer.astro";
+import Footer from "../layouts/Footer.astro";
 ---
 
-<Layout title="LR Manifesto - Fair Music Streaming & Stream2Own">
+<Layout title="The OWRL Manifesto - Time To Stream Fair">
 	<main class="min-h-screen lg:pl-64">
-		<div class="relative z-40">
+
+        <div class="relative z-40">
 			<Navigation />
 		</div>
-		<ManifestoNav />
-		<!-- Hero Section -->
-		<section class="min-h-[40vh] flex items-center justify-center p-6 relative">
-			<!-- Animated occult background -->
-			<div class="hero-bg">
-				<div class="symbol s1 large">☥</div>
-				<div class="symbol s2">✧</div>
-				<div class="symbol s3 large">⚸</div>
-				<div class="symbol s4">◊</div>
-				<div class="symbol s5 large">☾</div>
-				<div class="symbol s6 small">☉</div>
-				<div class="symbol s7 small">☿</div>
-			</div>
 
+        <ManifestoNav />
+
+		<section class="min-h-[40vh] flex items-center justify-center p-6 relative">
+			<div class="hero-bg">
+                <div class="symbol s1 large">☥</div>
+                <div class="symbol s2">✧</div>
+                <div class="symbol s3 large">⚸</div>
+                <div class="symbol s6 small">☉</div>
+                <div class="symbol s7 small">☿</div>
+			</div>
 			<div class="max-w-5xl mx-auto text-center relative">
-				<!-- Sub-header badge -->
 				<div class="mb-4 flex justify-center">
 					<span class="px-3 py-1 rounded-full text-[10px] md:text-xs tracking-widest uppercase bg-[var(--bg-surface)] text-[var(--monochrome-text)] border border-[var(--monochrome-text)]/40">
 						The ORWL Manifesto
 					</span>
 				</div>
-
-				<!-- Main Brand -->
 				<h1 class="text-5xl md:text-7xl mb-2 font-[Secular_One] leading-tight">
 					<span class="block" style="color: var(--monochrome-text)">Time To Stream Fair</span>
 				</h1>
-
                 <p class="text-base md:text-lg mb-8 text-[var(--text-secondary)] max-w-3xl mx-auto leading-relaxed">
                     Artist First. Fuck Capitalism. No AI Bullshit.
                 </p>
-
-				<!-- Occult symbol separator -->
 				<div class="mx-auto mb-6 flex items-center justify-center gap-2 text-[var(--monochrome-text)]/80 select-none" aria-hidden="true">
 					<span class="text-xl md:text-2xl">☥</span>
 					<span class="text-xl md:text-2xl">✧</span>
@@ -52,15 +44,13 @@ import Footer from "../components/Footer.astro";
 			</div>
 		</section>
 
-		<!-- Content Sections -->
 		<section class="px-4 py-16 mx-auto max-w-4xl">
 			<div class="space-y-16">
-
                 <section id="overview" class="space-y-6">
                     <h2 class="text-3xl font-bold text-monochrome">Introduction</h2>
                     <p class="text-lg leading-relaxed text-monochrome">
-                        Do you have a Spotify account? Then you're part of a system that exploits the very artists you love. Your subscription doesn't fund creativity or passion. It fills the pockets of shareholders, managers and millionaires like Taylor Swift. </p>
-
+                        Do you have a Spotify account? Then you're part of a system that exploits the very artists you love. Your subscription doesn't fund creativity or passion. It fills the pockets of shareholders, managers and millionaires like Taylor Swift.
+                    </p>
                     <h3 class="text-2xl font-bold text-monochrome">Our Values</h3>
                     <ol class="list-decimal pl-6 space-y-4 text-lg text-monochrome">
                         <li><strong>Artists first. Not corporates.</strong> Creativity belongs to the artists, not to those who exploit its value.</li>
@@ -70,7 +60,6 @@ import Footer from "../components/Footer.astro";
                         <li><strong>Own it. Not rent it.</strong> Artists and fans should own their music, not tied to subscriptions.</li>
                         <li><strong>Open. Not gatekeeping.</strong> Music is culture and everyone should be able to participate in it.</li>
                     </ol>
-
                     <h3 class="text-2xl font-bold text-monochrome">Overview</h3>
                     <p class="text-lg leading-relaxed text-monochrome">
                         Streaming has turned music into background noise for capitalism. Out of every €10.99 you pay, artists see around €0.74 and most of that goes to the top one percent. The rest disappears into corporate profits. </p>
@@ -137,45 +126,32 @@ import Footer from "../components/Footer.astro";
 
                 <section id="solution" class="space-y-6">
                     <h2 class="text-3xl font-bold" style="color: var(--monochrome-text)">Solution</h2>
-
-
-
                     <h3 class="text-2xl font-bold text-monochrome">Artist First</h3>
                     <p class="text-lg leading-relaxed text-monochrome">
 
                     </p>
-
                     <h3 class="text-2xl font-bold text-monochrome">Stream-2-Own</h3>
                     <p class="text-lg leading-relaxed text-monochrome">
 
                     </p>
-
                     <h3 class="text-2xl font-bold text-monochrome">No AI Policy</h3>
                     <p class="text-lg leading-relaxed text-monochrome">
 
                     </p>
-
                     <h3 class="text-2xl font-bold text-monochrome">Nonprofit</h3>
                     <p class="text-lg leading-relaxed text-monochrome">
 
                     </p>
-
                     <h3 class="text-2xl font-bold text-monochrome">Open Source</h3>
                     <p class="text-lg leading-relaxed text-monochrome">
 
                     </p>
-
-
-
-
                 </section>
-
-
-
-
             </div>
 		</section>
+
         <Footer />
+
 	</main>
 </Layout>
 
@@ -186,9 +162,8 @@ import Footer from "../components/Footer.astro";
 	border: 1px solid rgba(234, 39, 69, 0.1);
 }
 
-/* Smooth scrolling for section navigation */
 html {
 	scroll-behavior: smooth;
-	scroll-padding-top: 80px; /* Account for fixed header */
+	scroll-padding-top: 80px;
 }
 </style>
