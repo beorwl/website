@@ -31,27 +31,46 @@
   .btn {
     @apply inline-flex items-center justify-center px-6 py-3 rounded-md text-sm font-medium transition-colors;
   }
+
   .btn-primary {
     background: var(--accent);
     color: var(--monochrome-bg);
+      border-radius: 0 !important;
   }
-  .btn-primary:hover { opacity: 0.9; }
+
+  .btn-primary:hover {
+      opacity: 0.9;
+  }
+
   .btn-secondary {
     background: transparent;
     border: 1px solid var(--monochrome-accent);
     color: var(--text-primary);
+      border-radius: 0 !important;
   }
-  .btn-secondary:hover { background: color-mix(in srgb, var(--monochrome-accent) 10%, transparent); }
+
+  .btn-secondary:hover {
+      background: color-mix(in srgb, var(--monochrome-accent) 10%, transparent);
+  }
+
   .surface { background: var(--bg-surface); }
+
   .muted { color: var(--text-secondary); }
 
   .text-monochrome {
     color: var(--monochrome-text);
   }
+
   .text-monochrome-muted {
     color: var(--monochrome-muted);
   }
 
+    .rounded,
+    .rounded-sm,
+    .rounded-md,
+    .rounded-lg {
+        border-radius: 0 !important;
+    }
 
   .hero-bg { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
   .symbol { position: absolute; opacity: 0.18; color: var(--accent); font-size: 2rem; line-height: 1; }
