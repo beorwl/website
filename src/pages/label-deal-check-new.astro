@@ -16,14 +16,10 @@ import Footer from '../layouts/Footer.astro';
                        </span>
 				<h1 class="text-5xl md:text-7xl font-[Secular_One] mb-6">Is Your Labeldeal Fair?</h1>
 				<p class="text-[var(--text-secondary)] max-w-2xl mx-auto text-lg">
-					Get your label contract reviewed by our artist collective and network with industry experience. We share knowledge for free so you don’t get burned by the same traps they did.
+					Get your label contract reviewed by our artist collective and network with industry experience. We share knowledge for free so you don't get burned by the same traps they did.
 				</p>
-
-
 			</div>
 		</section>
-
-
 
         <!-- How It Works Section -->
         <section class="py-24 px-6">
@@ -51,9 +47,9 @@ import Footer from '../layouts/Footer.astro';
 
                     <div class="text-center">
                         <div class="w-16 h-16 mx-auto flex items-center justify-center rounded-full bg-[var(--accent)]/20 mb-4">
-                            <span class="text-2xl font-bold text-[var,--accent)]">3</span>
+                            <span class="text-2xl font-bold text-[var(--accent)]">3</span>
                         </div>
-                        <h3 class="text-lg font-bold mb-2 text-[var,--text-primary)]">Report</h3>
+                        <h3 class="text-lg font-bold mb-2 text-[var(--text-primary)]">Report</h3>
                         <p class="text-sm text-[var(--text-secondary)]">You get a report with our recommendations</p>
                     </div>
 
@@ -61,7 +57,7 @@ import Footer from '../layouts/Footer.astro';
                         <div class="w-16 h-16 mx-auto flex items-center justify-center rounded-full bg-[var(--accent)]/20 mb-4">
                             <span class="text-2xl font-bold text-[var(--accent)]">4</span>
                         </div>
-                        <h3 class="text-lg font-bold mb-2 text-[var,--text-primary)]">Decide</h3>
+                        <h3 class="text-lg font-bold mb-2 text-[var(--text-primary)]">Decide</h3>
                         <p class="text-sm text-[var(--text-secondary)]">Make an informed decision about your contract</p>
                     </div>
                 </div>
@@ -71,18 +67,15 @@ import Footer from '../layouts/Footer.astro';
 
         <section class="py-24 px-6 bg-[var(--bg-surface)]">
             <div class="max-w-5xl mx-auto">
-
-
                 <!-- Two-column layout -->
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                     <!-- Left column: Content -->
                     <div class="space-y-6">
-
                         <div class="max-w-3xl mx-auto">
                             <div class="text-center mb-12">
                                 <h2 class="text-3xl md:text-4xl font-[Secular_One] mb-4">Submit Your Contract</h2>
                                 <p class="text-[var(--text-secondary)] max-w-2xl mx-auto">
-                                    If necessary, please redact the names of all involved parties. Anyway, we won’t share or make it public.
+                                    If necessary, please redact the names of all involved parties. Anyway, we won't share or make it public.
                                 </p>
                             </div>
 
@@ -91,62 +84,72 @@ import Footer from '../layouts/Footer.astro';
                                     <!-- File Upload -->
                                     <div>
                                         <label class="block text-sm font-medium mb-2 text-[var(--text-primary)]">
-                                            Contract Document(s) (PDF, DOC, DOCX)
+                                            Contract Documents*
                                         </label>
-                                        <div class="border-2 border-dashed border-[var(--accent)]/30 rounded-lg p-8 text-center hover:border-[var(--accent)]/50 transition-colors cursor-pointer" id="dropzone">
-                                            <input type="file" id="file-input" accept=".pdf,.doc,.docx" class="hidden" required multiple />
-                                            <div id="upload-prompt">
 
-                                                <p class="text-[var(--text-primary)] mb-2">Click to upload or drag and drop</p>
-                                                <p class="text-sm text-[var(--text-secondary)]">Multiple files allowed: PDF, DOC, DOCX up to 10MB each</p>
-                                            </div>
-                                            <div id="file-info" class="hidden">
-                                                <div id="file-list" class="text-[var(--text-primary)]"></div>
-                                                <button type="button" id="remove-file" class="text-sm text-[var(--accent)] mt-2 hover:underline">Remove all files</button>
+                                        <!-- Main dropzone when no files selected -->
+                                        <div class="border-2 border-dashed border-[var(--accent)]/30 rounded-lg p-8 text-center hover:border-[var(--accent)]/50 transition-colors cursor-pointer" id="main-dropzone">
+                                            <input type="file" id="main-file-input" accept=".pdf,.doc,.docx" class="hidden" required />
+                                            <p class="text-[var(--text-primary)] mb-2">Click to upload or drag and drop</p>
+                                        </div>
+
+                                        <!-- Selected files container -->
+                                        <div id="selected-files-container" class="mt-4 space-y-3 hidden">
+                                            <h3 class="text-sm font-medium text-[var(--text-primary)]">Selected Files:</h3>
+                                            <div id="files-list" class="space-y-2"></div>
+
+                                            <!-- Add another file option -->
+                                            <div id="add-another-container" class="border-2 border-dashed border-[var(--accent)]/30 rounded-lg p-4 text-center hover:border-[var(--accent)]/50 transition-colors cursor-pointer mt-3">
+                                                <input type="file" id="additional-file-input" accept=".pdf,.doc,.docx" class="hidden" />
+                                                <div class="flex items-center justify-center gap-2">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[var(--accent)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                                                    </svg>
+                                                    <span class="text-[var(--text-primary)]">Add another file</span>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-
-                                    <!-- Optional Context -->
-                                    <div>
-                                        <label for="context" class="block text-sm font-medium mb-2 text-[var(--text-primary)]">
-                                            Additional Context (Optional)
-                                        </label>
-                                        <textarea
-                                                id="context"
-                                                rows="4"
-                                                class="w-full px-4 py-3 bg-[var(--bg-primary)] border border-[var(--accent)]/30 rounded-lg text-[var(--text-primary)] focus:border-[var(--accent)] focus:outline-none"
-                                                placeholder="Any specific concerns or questions about the contract? (This remains anonymous)"
-                                        ></textarea>
                                     </div>
 
                                     <!-- Email Field -->
                                     <div>
                                         <label for="email" class="block text-sm font-medium mb-2 text-[var(--text-primary)]">
-                                            Your Email for Results
+                                            Your Email*
                                         </label>
                                         <input
-                                            type="email"
-                                            id="email"
-                                            name="email"
-                                            class="w-full px-4 py-3 bg-[var(--bg-primary)] border border-[var(--accent)]/30 rounded-lg text-[var(--text-primary)] focus:border-[var,--accent)] focus:outline-none"
-                                            placeholder="your-email@example.com (anonymous email services welcome)"
-                                            required
+                                                type="email"
+                                                id="email"
+                                                name="email"
+                                                class="w-full px-4 py-3 bg-[var(--bg-primary)] border border-[var(--accent)]/30 rounded-lg text-[var(--text-primary)] focus:border-[var(--accent)] focus:outline-none"
+                                                placeholder=""
+                                                required
                                         />
-                                        <p class="mt-1 text-xs text-[var(--text-secondary)]">We'll send the analysis to this email address</p>
                                     </div>
+
+                                    <!-- Optional Context -->
+                                    <div>
+                                        <label for="context" class="block text-sm font-medium mb-2 text-[var(--text-primary)]">
+                                            Additional Context
+                                        </label>
+                                        <textarea
+                                                id="context"
+                                                rows="4"
+                                                class="w-full px-4 py-3 bg-[var(--bg-primary)] border border-[var(--accent)]/30 rounded-lg text-[var(--text-primary)] focus:border-[var(--accent)] focus:outline-none"
+                                                placeholder="Any specific concerns or questions about the contract?"
+                                        ></textarea>
+                                    </div>
+
+
 
                                     <!-- Privacy Note -->
                                     <div class="bg-[var(--bg-primary)] p-4 rounded-lg border border-[var(--accent)]/20">
                                         <div class="flex gap-3">
-
                                             <div class="text-sm text-[var(--text-secondary)]">
                                                 <p class="font-semibold text-[var(--text-primary)] mb-1">Your Privacy is Guaranteed</p>
                                                 <ul class="space-y-1 list-disc list-inside">
-                                                    <li>We never ask for your name, band name, or label name</li>
+                                                    <li>We never ask for your name, band name or label name</li>
                                                     <li>Your contract is encrypted during upload and storage</li>
-                                                    <li>Results are sent only to your chosen contact method</li>
-                                                    <li>All data is deleted after 30 days</li>
+                                                    <li>Report is sent only to your chosen email</li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -157,19 +160,13 @@ import Footer from '../layouts/Footer.astro';
                                         Submit Contract for Review
                                     </button>
 
-                                    <p class="text-center text-sm text-[var(--text-secondary)]">
-                                        You'll receive a detailed analysis within 5-7 business days
-                                    </p>
                                 </form>
                             </div>
                         </div>
-
-
                     </div>
 
                     <!-- Right column: Image -->
                     <div class="relative">
-
                         <div class=" p-6 rounded-lg">
                             <div class="flex gap-4">
                                 <div class="flex-shrink-0">
@@ -178,7 +175,7 @@ import Footer from '../layouts/Footer.astro';
                                     </div>
                                 </div>
                                 <div>
-                                    <h3 class="text-xl font-bold mb-2 text-[var,--text-primary)]">Revenue Split & Royalties</h3>
+                                    <h3 class="text-xl font-bold mb-2 text-[var(--text-primary)]">Revenue Split & Royalties</h3>
                                     <p class="text-[var(--text-secondary)]">
                                         We examine the percentage you receive from streams, sales, merchandise, and live performances. Is it industry standard or exploitative?
                                     </p>
@@ -186,16 +183,15 @@ import Footer from '../layouts/Footer.astro';
                             </div>
                         </div>
 
-
                         <div class=" p-6 rounded-lg">
                             <div class="flex gap-4">
                                 <div class="flex-shrink-0">
                                     <div class="w-8 h-8 flex items-center justify-center rounded-full bg-[var(--accent)]/20">
-                                        <span class="text-[var,--accent)] font-bold">2</span>
+                                        <span class="text-[var(--accent)] font-bold">2</span>
                                     </div>
                                 </div>
                                 <div>
-                                    <h3 class="text-xl font-bold mb-2 text-[var,--text-primary)]">Contract Duration & Options</h3>
+                                    <h3 class="text-xl font-bold mb-2 text-[var(--text-primary)]">Contract Duration & Options</h3>
                                     <p class="text-[var(--text-secondary)]">
                                         How long are you locked in? Are there automatic renewals? Can you terminate if things go wrong?
                                     </p>
@@ -207,11 +203,11 @@ import Footer from '../layouts/Footer.astro';
                             <div class="flex gap-4">
                                 <div class="flex-shrink-0">
                                     <div class="w-8 h-8 flex items-center justify-center rounded-full bg-[var(--accent)]/20">
-                                        <span class="text-[var,--accent)] font-bold">3</span>
+                                        <span class="text-[var(--accent)] font-bold">3</span>
                                     </div>
                                 </div>
                                 <div>
-                                    <h3 class="text-xl font-bold mb-2 text-[var,--text-primary)]">Rights & Ownership</h3>
+                                    <h3 class="text-xl font-bold mb-2 text-[var(--text-primary)]">Rights & Ownership</h3>
                                     <p class="text-[var(--text-secondary)]">
                                         Who owns your master recordings? Your publishing rights? Your merchandise designs? This is crucial.
                                     </p>
@@ -223,11 +219,11 @@ import Footer from '../layouts/Footer.astro';
                             <div class="flex gap-4">
                                 <div class="flex-shrink-0">
                                     <div class="w-8 h-8 flex items-center justify-center rounded-full bg-[var(--accent)]/20">
-                                        <span class="text-[var,--accent)] font-bold">4</span>
+                                        <span class="text-[var(--accent)] font-bold">4</span>
                                     </div>
                                 </div>
                                 <div>
-                                    <h3 class="text-xl font-bold mb-2 text-[var,--text-primary)]">Recoupment & Advances</h3>
+                                    <h3 class="text-xl font-bold mb-2 text-[var(--text-primary)]">Recoupment & Advances</h3>
                                     <p class="text-[var(--text-secondary)]">
                                         If they're offering an advance, what are the terms for paying it back? Are the recoupment terms reasonable?
                                     </p>
@@ -239,11 +235,11 @@ import Footer from '../layouts/Footer.astro';
                             <div class="flex gap-4">
                                 <div class="flex-shrink-0">
                                     <div class="w-8 h-8 flex items-center justify-center rounded-full bg-[var(--accent)]/20">
-                                        <span class="text-[var,--accent)] font-bold">5</span>
+                                        <span class="text-[var(--accent)] font-bold">5</span>
                                     </div>
                                 </div>
                                 <div>
-                                    <h3 class="text-xl font-bold mb-2 text-[var,--text-primary)]">Transparency & Reporting</h3>
+                                    <h3 class="text-xl font-bold mb-2 text-[var(--text-primary)]">Transparency & Reporting</h3>
                                     <p class="text-[var(--text-secondary)]">
                                         Are you guaranteed regular sales reports? Can you audit their books? Transparency is everything.
                                     </p>
@@ -255,11 +251,11 @@ import Footer from '../layouts/Footer.astro';
                             <div class="flex gap-4">
                                 <div class="flex-shrink-0">
                                     <div class="w-8 h-8 flex items-center justify-center rounded-full bg-[var(--accent)]/20">
-                                        <span class="text-[var,--accent)] font-bold">6</span>
+                                        <span class="text-[var(--accent)] font-bold">6</span>
                                     </div>
                                 </div>
                                 <div>
-                                    <h3 class="text-xl font-bold mb-2 text-[var,--text-primary)]">Red Flags & Exploitative Clauses</h3>
+                                    <h3 class="text-xl font-bold mb-2 text-[var(--text-primary)]">Red Flags & Exploitative Clauses</h3>
                                     <p class="text-[var(--text-secondary)]">
                                         We identify predatory terms, hidden fees, and any clauses that could trap you in an unfair arrangement.
                                     </p>
@@ -270,8 +266,6 @@ import Footer from '../layouts/Footer.astro';
                 </div>
             </div>
         </section>
-
-
 
 		<!-- Testimonials / Trust Section -->
 		<section class="py-24 px-6">
@@ -373,102 +367,179 @@ import Footer from '../layouts/Footer.astro';
 </Layout>
 
 <script>
-	// File upload handling
-	const fileInput = document.getElementById('file-input') as HTMLInputElement;
-	const dropzone = document.getElementById('dropzone');
-	const uploadPrompt = document.getElementById('upload-prompt');
-	const fileInfo = document.getElementById('file-info');
-	const fileName = document.getElementById('file-name');
-	const removeFileBtn = document.getElementById('remove-file');
-	const contactMethod = document.getElementById('contact-method') as HTMLSelectElement;
-	const contactInputContainer = document.getElementById('contact-input-container');
-	const contactInput = document.getElementById('contact-input') as HTMLInputElement;
-	const form = document.getElementById('contract-upload-form') as HTMLFormElement;
+	// File collection to store all files
+	let selectedFiles = [];
 
-	// Click to upload
-	dropzone?.addEventListener('click', () => {
-		fileInput?.click();
-	});
+	// DOM elements
+	const mainDropzone = document.getElementById('main-dropzone');
+	const mainFileInput = document.getElementById('main-file-input');
+	const selectedFilesContainer = document.getElementById('selected-files-container');
+	const filesList = document.getElementById('files-list');
+	const addAnotherContainer = document.getElementById('add-another-container');
+	const additionalFileInput = document.getElementById('additional-file-input');
+	const form = document.getElementById('contract-upload-form');
 
-	// File selection
-	fileInput?.addEventListener('change', (e) => {
-		const files = (e.target as HTMLInputElement).files;
-		if (files && files.length > 0) {
-			displayFiles(files);
+	// File validation
+	function isValidFile(file) {
+		const allowedTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
+		const maxSize = 10 * 1024 * 1024; // 10MB
+
+		// Check file type
+		if (!allowedTypes.includes(file.type)) {
+			alert(`Invalid file type: ${file.name}\nOnly PDF, DOC, and DOCX are allowed.`);
+			return false;
 		}
-	});
 
-	// Drag and drop
-	dropzone?.addEventListener('dragover', (e) => {
-		e.preventDefault();
-		dropzone.classList.add('border-[var(--accent)]');
-	});
-
-	dropzone?.addEventListener('dragleave', () => {
-		dropzone.classList.remove('border-[var(--accent)]');
-	});
-
-	dropzone?.addEventListener('drop', (e) => {
-		e.preventDefault();
-		dropzone.classList.remove('border-[var(--accent)]');
-		const files = e.dataTransfer?.files;
-		if (files && files.length > 0) {
-			// Set the files to the input
-			const dataTransfer = new DataTransfer();
-			for (let i = 0; i < files.length; i++) {
-				dataTransfer.items.add(files[i]);
-			}
-			if (fileInput) fileInput.files = dataTransfer.files;
-			displayFiles(files);
+		// Check file size
+		if (file.size > maxSize) {
+			alert(`File too large: ${file.name}\nMaximum size is 10MB.`);
+			return false;
 		}
-	});
 
-	function displayFiles(files: FileList) {
-		const fileList = document.getElementById('file-list');
-		if (fileList) {
-			fileList.innerHTML = '';
-			for (let i = 0; i < files.length; i++) {
-				const fileName = document.createElement('div');
-				fileName.textContent = files[i].name;
-				fileName.className = 'text-[var(--text-primary)]';
-				fileList.appendChild(fileName);
-			}
-		}
-		uploadPrompt?.classList.add('hidden');
-		fileInfo?.classList.remove('hidden');
+		return true;
 	}
 
-	removeFileBtn?.addEventListener('click', (e) => {
-		e.stopPropagation();
-		if (fileInput) fileInput.value = '';
-		uploadPrompt?.classList.remove('hidden');
-		fileInfo?.classList.add('hidden');
+	// Create file item element
+	function createFileItem(file, index) {
+		const fileItem = document.createElement('div');
+		fileItem.className = 'flex items-center justify-between p-3 bg-[var(--bg-primary)] rounded-lg border border-[var(--accent)]/20';
+		fileItem.innerHTML = `
+			<div class="flex items-center gap-2">
+				<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[var(--accent)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+				</svg>
+				<span class="text-[var(--text-primary)] text-sm truncate max-w-[180px]">${file.name}</span>
+			</div>
+			<button type="button" class="remove-file-btn text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors" data-index="${index}">
+				<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+				</svg>
+			</button>
+		`;
+
+		return fileItem;
+	}
+
+	// Update files display
+	function updateFilesDisplay() {
+		// Clear the files list
+		filesList.innerHTML = '';
+
+		// Add each file to the list
+		selectedFiles.forEach((file, index) => {
+			const fileItem = createFileItem(file, index);
+			filesList.appendChild(fileItem);
+		});
+
+		// Show/hide containers based on whether files are selected
+		if (selectedFiles.length > 0) {
+			mainDropzone.classList.add('hidden');
+			selectedFilesContainer.classList.remove('hidden');
+
+			// Add event listeners to remove buttons
+			document.querySelectorAll('.remove-file-btn').forEach(button => {
+				button.addEventListener('click', function() {
+					const index = parseInt(this.getAttribute('data-index'));
+					removeFile(index);
+				});
+			});
+		} else {
+			mainDropzone.classList.remove('hidden');
+			selectedFilesContainer.classList.add('hidden');
+		}
+	}
+
+	// Add a file to the collection
+	function addFile(file) {
+		if (isValidFile(file)) {
+			selectedFiles.push(file);
+			updateFilesDisplay();
+		}
+	}
+
+	// Remove a file from the collection
+	function removeFile(index) {
+		selectedFiles.splice(index, 1);
+		updateFilesDisplay();
+	}
+
+	// Handle file selection from the main dropzone
+	mainFileInput.addEventListener('change', (e) => {
+		const file = e.target.files[0];
+		if (file) {
+			addFile(file);
+			mainFileInput.value = ''; // Reset input
+		}
 	});
 
-	// Contact method handling
-	contactMethod?.addEventListener('change', (e) => {
-		const method = (e.target as HTMLSelectElement).value;
-		if (method) {
-			contactInputContainer?.classList.remove('hidden');
-			if (contactInput) {
-				contactInput.required = true;
-				contactInput.placeholder = method === 'email'
-					? 'your-email@example.com (anonymous email services welcome)'
-					: method === 'discord'
-					? 'YourDiscordUsername#1234'
-					: '@yourtelegram';
-			}
-		} else {
-			contactInputContainer?.classList.add('hidden');
-			if (contactInput) contactInput.required = false;
+	// Handle file selection from the "Add another file" option
+	additionalFileInput.addEventListener('change', (e) => {
+		const file = e.target.files[0];
+		if (file) {
+			addFile(file);
+			additionalFileInput.value = ''; // Reset input
+		}
+	});
+
+	// Click handlers for dropzones
+	mainDropzone.addEventListener('click', () => {
+		mainFileInput.click();
+	});
+
+	addAnotherContainer.addEventListener('click', () => {
+		additionalFileInput.click();
+	});
+
+	// Drag and drop for main dropzone
+	mainDropzone.addEventListener('dragover', (e) => {
+		e.preventDefault();
+		mainDropzone.classList.add('border-[var(--accent)]');
+	});
+
+	mainDropzone.addEventListener('dragleave', () => {
+		mainDropzone.classList.remove('border-[var(--accent)]');
+	});
+
+	mainDropzone.addEventListener('drop', (e) => {
+		e.preventDefault();
+		mainDropzone.classList.remove('border-[var(--accent)]');
+
+		if (e.dataTransfer.files.length > 0) {
+			const file = e.dataTransfer.files[0];
+			addFile(file);
+		}
+	});
+
+	// Drag and drop for "Add another file" container
+	addAnotherContainer.addEventListener('dragover', (e) => {
+		e.preventDefault();
+		addAnotherContainer.classList.add('border-[var(--accent)]');
+	});
+
+	addAnotherContainer.addEventListener('dragleave', () => {
+		addAnotherContainer.classList.remove('border-[var(--accent)]');
+	});
+
+	addAnotherContainer.addEventListener('drop', (e) => {
+		e.preventDefault();
+		addAnotherContainer.classList.remove('border-[var(--accent)]');
+
+		if (e.dataTransfer.files.length > 0) {
+			const file = e.dataTransfer.files[0];
+			addFile(file);
 		}
 	});
 
 	// Form submission
-	form?.addEventListener('submit', async (e) => {
+	form.addEventListener('submit', async (e) => {
 		e.preventDefault();
 
-		const submitButton = form.querySelector('button[type="submit"]') as HTMLButtonElement;
+		if (selectedFiles.length === 0) {
+			alert('Please select at least one file to upload');
+			return;
+		}
+
+		const submitButton = form.querySelector('button[type="submit"]');
 		const originalButtonText = submitButton.textContent;
 
 		try {
@@ -477,18 +548,10 @@ import Footer from '../layouts/Footer.astro';
 			submitButton.textContent = 'Uploading...';
 
 			// Get form values
-			const files = fileInput?.files;
-			const contextTextarea = document.getElementById('context') as HTMLTextAreaElement;
+			const contextTextarea = document.getElementById('context');
 			const additionalContext = contextTextarea?.value || '';
-			const emailInput = document.getElementById('email') as HTMLInputElement;
+			const emailInput = document.getElementById('email');
 			const email = emailInput?.value;
-			const method = contactMethod?.value;
-			const contact = contactInput?.value;
-
-			if (!files || files.length === 0) {
-				alert('Please select at least one file to upload');
-				return;
-			}
 
 			if (!email) {
 				alert('Please provide your email address');
@@ -497,17 +560,12 @@ import Footer from '../layouts/Footer.astro';
 
 			// Create FormData
 			const formData = new FormData();
-			for (let i = 0; i < files.length; i++) {
-				formData.append('file', files[i]);
-			}
+			selectedFiles.forEach(file => {
+				formData.append('file', file);
+			});
+
 			formData.append('additionalContext', additionalContext);
 			formData.append('email', email);
-
-			// Add contact method if it exists (for backward compatibility)
-			if (method && contact) {
-				formData.append('contactMethod', method);
-				formData.append('contactInfo', contact);
-			}
 
 			// Submit to API
 			const response = await fetch('/api/upload-contract', {
@@ -518,13 +576,12 @@ import Footer from '../layouts/Footer.astro';
 			const result = await response.json();
 
 			if (response.ok && result.success) {
-				alert(`Success! Your contract has been submitted for review.\n\nSubmission ID: ${result.submissionId}\n\nYou'll receive a detailed analysis at your provided contact within 5-7 business days.`);
+				alert(`Success! Your contract has been submitted for review.\n\nSubmission ID: ${result.submissionId}\n\nYou'll receive a detailed analysis at your provided email within 5-7 business days.`);
 
 				// Reset form
 				form.reset();
-				uploadPrompt?.classList.remove('hidden');
-				fileInfo?.classList.add('hidden');
-				contactInputContainer?.classList.add('hidden');
+				selectedFiles = [];
+				updateFilesDisplay();
 			} else {
 				alert(`Error: ${result.error || 'Failed to upload contract. Please try again.'}`);
 			}

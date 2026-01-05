@@ -4,229 +4,395 @@ import Navigation from '../layouts/Navigation.astro';
 import Footer from '../layouts/Footer.astro';
 ---
 
-<Layout title="ORWL ☉ About">
+<Layout title="BEORWL ☉ About">
 	<main>
 		<Navigation />
 
 		<!-- About Hero Section -->
 		<section class="py-24 px-6">
 			<div class="max-w-5xl mx-auto text-center">
-				       <span class="px-3 py-1 rounded-full text-[10px] md:text-xs tracking-widest uppercase bg-[var(--bg-primary)] text-[var(--accent)] border border-[var(--accent)]/40 inline-block mb-4">
-                          Nonprofit & Open Source
-                       </span>
-				<h1 class="text-5xl md:text-7xl font-[Secular_One] mb-6">ORWL</h1>
+				<span class="px-3 py-1 rounded-full text-[10px] md:text-xs tracking-widest uppercase bg-[var(--bg-primary)] text-[var(--accent)] border border-[var(--accent)]/40 inline-block mb-4">
+					Nonprofit & Open Source
+				</span>
+				<h1 class="text-5xl md:text-7xl font-[Secular_One] mb-6">Built by the Community,<br/>For the Community</h1>
 				<p class="text-[var(--text-secondary)] max-w-2xl mx-auto text-lg">
-					We're a nonprofit organization with the clear mission to create a fair, transparent and a community-driven streaming solution.
+					BEORWL isn't just another streaming platform. We're a movement—a nonprofit, open-source rebellion against an industry that's been exploiting artists for too long.
 				</p>
 			</div>
 		</section>
 
-		<!-- About Main Content -->
+		<!-- The Problem We're Solving -->
 		<section class="py-12 px-6">
 			<div class="max-w-6xl mx-auto">
-				<!-- Our Story Section -->
-				<div class="surface p-8 rounded-lg border border-[var(--accent)]/20 mb-12">
-					<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-						<div>
-							<h2 class="text-3xl font-[Secular_One] mb-6" style="color: var(--monochrome-accent)">Our Story</h2>
-							<div class="text-[var(--text-secondary)] space-y-4">
-								<p>
-									BEORWL was founded in 2023 by a collective of musicians, developers, and metal enthusiasts who were tired of seeing artists get pennies from streaming platforms while tech companies made billions.
-								</p>
-								<p>
-									United by our love for extreme metal and a belief that music should be valued fairly, we set out to create a platform that puts artists and fans first—not shareholders or venture capitalists.
-								</p>
-								<p>
-									Our name, BEORWL, comes from Old English for "bear," symbolizing strength and protection—exactly what we aim to provide for the metal community against the exploitative practices of the mainstream music industry.
-								</p>
+				<div class="surface p-12 rounded-lg border-2 border-[var(--accent)]/30 mb-16 relative overflow-hidden">
+					<div class="absolute top-0 right-0 w-64 h-64 bg-[var(--accent)]/5 rounded-full blur-3xl"></div>
+					<div class="relative z-10">
+						<div class="text-center mb-12">
+							<span class="text-[var(--accent)] text-sm font-bold tracking-widest uppercase">The Broken System</span>
+							<h2 class="text-4xl md:text-5xl font-[Secular_One] mt-4 mb-6" style="color: var(--monochrome-accent)">Why We Exist</h2>
+						</div>
+
+						<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+							<div class="text-center p-6">
+								<div class="text-6xl font-bold mb-2 text-[var(--accent)]">$0.003</div>
+								<p class="text-[var(--text-secondary)]">Average per stream on major platforms</p>
+							</div>
+							<div class="text-center p-6">
+								<div class="text-6xl font-bold mb-2 text-[var(--accent)]">70%</div>
+								<p class="text-[var(--text-secondary)]">Of revenue goes to intermediaries, not artists</p>
+							</div>
+							<div class="text-center p-6">
+								<div class="text-6xl font-bold mb-2 text-[var(--accent)]">0</div>
+								<p class="text-[var(--text-secondary)]">Transparency in how your money flows</p>
 							</div>
 						</div>
-						<div class="relative">
-							<div class="aspect-video rounded-lg overflow-hidden">
-								<img src="https://source.unsplash.com/random/800x450?metal+concert" alt="Metal concert" class="w-full h-full object-cover">
-							</div>
-							<!-- Decorative elements -->
-							<div class="absolute -bottom-4 -right-4 w-32 h-32 border-2 border-[var(--accent)]/20 rounded-lg -z-10"></div>
-						</div>
+
+						<p class="text-center text-[var(--text-secondary)] text-lg max-w-3xl mx-auto">
+							Musicians need <strong style="color: var(--monochrome-accent)">millions of streams</strong> just to make minimum wage. Meanwhile, tech companies and labels profit billions. This isn't just unfair—it's unsustainable. We built BEORWL to change that.
+						</p>
 					</div>
 				</div>
 
-				<!-- Nonprofit Organization Section -->
-				<div class="surface p-8 rounded-lg border border-[var(--accent)]/20 mb-12">
-					<h2 class="text-3xl font-[Secular_One] mb-6" style="color: var(--monochrome-accent)">A True Nonprofit Organization</h2>
-
-					<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-						<div class="text-[var(--text-secondary)] space-y-4">
-							<p>
-								BEORWL is registered as a nonprofit organization committed to serving the metal community. This means:
-							</p>
-							<ul class="space-y-2">
-								<li class="flex items-start">
-									<svg class="w-5 h-5 mr-2 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="color: var(--monochrome-accent)">
-										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-									</svg>
-									<span>All revenue beyond operating costs is reinvested into the platform or paid directly to artists</span>
-								</li>
-								<li class="flex items-start">
-									<svg class="w-5 h-5 mr-2 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="color: var(--monochrome-accent)">
-										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-									</svg>
-									<span>No shareholders, no venture capital, no profit-driven decisions</span>
-								</li>
-								<li class="flex items-start">
-									<svg class="w-5 h-5 mr-2 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="color: var(--monochrome-accent)">
-										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-									</svg>
-									<span>Full financial transparency with regular public reports on revenue distribution</span>
-								</li>
-								<li class="flex items-start">
-									<svg class="w-5 h-5 mr-2 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="color: var(--monochrome-accent)">
-										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-									</svg>
-									<span>Democratic decision-making involving both our team and community members</span>
-								</li>
-							</ul>
-							<p>
-								Our nonprofit status ensures that our mission—fair compensation for artists and high-quality music for fans—remains our only priority, now and in the future.
-							</p>
-						</div>
-						<div class="text-[var(--text-secondary)] space-y-4">
-							<p>
-								Unlike traditional streaming services, we don't need to maximize profits or satisfy investors. This allows us to:
-							</p>
-							<ul class="space-y-2">
-								<li class="flex items-start">
-									<svg class="w-5 h-5 mr-2 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="color: var(--monochrome-accent)">
-										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-									</svg>
-									<span>Pay artists up to 85% of all revenue generated by their music</span>
-								</li>
-								<li class="flex items-start">
-									<svg class="w-5 h-5 mr-2 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="color: var(--monochrome-accent)">
-										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-									</svg>
-									<span>Focus on the long-term health of the metal community rather than quarterly growth</span>
-								</li>
-								<li class="flex items-start">
-									<svg class="w-5 h-5 mr-2 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="color: var(--monochrome-accent)">
-										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-									</svg>
-									<span>Make decisions based on what's best for artists and fans, not what maximizes profit</span>
-								</li>
-								<li class="flex items-start">
-									<svg class="w-5 h-5 mr-2 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="color: var(--monochrome-accent)">
-										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-									</svg>
-									<span>Maintain complete independence from major labels and tech conglomerates</span>
-								</li>
-							</ul>
-						</div>
+				<!-- Origin Story: A Different Approach -->
+				<div class="mb-16">
+					<div class="text-center mb-12">
+						<span class="text-[var(--accent)] text-sm font-bold tracking-widest uppercase">Our Origin</span>
+						<h2 class="text-4xl md:text-5xl font-[Secular_One] mt-4" style="color: var(--monochrome-accent)">Born from Frustration,<br/>Built with Purpose</h2>
 					</div>
-				</div>
 
-				<!-- Open Source Section -->
-				<div class="surface p-8 rounded-lg border border-[var(--accent)]/20 mb-12">
-					<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-						<div class="order-2 md:order-1 relative">
-							<div class="aspect-video rounded-lg overflow-hidden">
-								<img src="https://source.unsplash.com/random/800x450?code" alt="Open source code" class="w-full h-full object-cover">
+					<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+						<div class="surface p-8 rounded-lg border border-[var(--accent)]/20">
+							<div class="flex items-start gap-4 mb-4">
+								<div class="w-12 h-12 rounded-full bg-[var(--accent)]/20 flex items-center justify-center flex-shrink-0">
+									<span class="text-2xl">🎸</span>
+								</div>
+								<div>
+									<h3 class="text-2xl font-bold mb-2" style="color: var(--monochrome-accent)">2023: The Spark</h3>
+									<p class="text-[var(--text-secondary)]">
+										A group of underground metal musicians in Mainz, Germany, gathered after a show. They'd just learned their music had been streamed 100,000 times—earning them barely enough to cover gas for the tour. Something had to change.
+									</p>
+								</div>
 							</div>
-							<!-- Decorative elements -->
-							<div class="absolute -top-4 -left-4 w-32 h-32 border-2 border-[var(--accent)]/20 rounded-lg -z-10"></div>
 						</div>
-						<div class="order-1 md:order-2">
-							<h2 class="text-3xl font-[Secular_One] mb-6" style="color: var(--monochrome-accent)">Open Source, Open Platform</h2>
-							<div class="text-[var(--text-secondary)] space-y-4">
-								<p>
-									We believe in transparency and community involvement at every level. That's why BEORWL is built entirely on open-source technology.
-								</p>
-								<ul class="space-y-2">
-									<li class="flex items-start">
-										<svg class="w-5 h-5 mr-2 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="color: var(--monochrome-accent)">
-											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-										</svg>
-										<span>Our codebase is fully open-source and available on GitHub</span>
-									</li>
-									<li class="flex items-start">
-										<svg class="w-5 h-5 mr-2 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="color: var(--monochrome-accent)">
-											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-										</svg>
-										<span>Contributors from around the world help improve our platform</span>
-									</li>
-									<li class="flex items-start">
-										<svg class="w-5 h-5 mr-2 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="color: var(--monochrome-accent)">
-											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-										</svg>
-										<span>Security and privacy are enhanced through public code review</span>
-									</li>
-									<li class="flex items-start">
-										<svg class="w-5 h-5 mr-2 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="color: var(--monochrome-accent)">
-											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-										</svg>
-										<span>Anyone can verify that we're doing what we say we are</span>
-									</li>
-								</ul>
-								<p>
-									By making our platform open source, we ensure that the technology behind BEORWL will always serve its intended purpose—even if our organization were to change in the future.
-								</p>
-								<div class="mt-4">
-									<a href="https://github.com/beorwl" target="_blank" rel="noopener" class="inline-flex items-center text-[var(--accent)] hover:underline">
-										<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-										Explore Our GitHub
-									</a>
+
+						<div class="surface p-8 rounded-lg border border-[var(--accent)]/20">
+							<div class="flex items-start gap-4 mb-4">
+								<div class="w-12 h-12 rounded-full bg-[var(--accent)]/20 flex items-center justify-center flex-shrink-0">
+									<span class="text-2xl">💻</span>
+								</div>
+								<div>
+									<h3 class="text-2xl font-bold mb-2" style="color: var(--monochrome-accent)">The Coalition</h3>
+									<p class="text-[var(--text-secondary)]">
+										Developers, designers, and tech enthusiasts who loved metal joined forces with the musicians. Together, we had the skills to build something better—a platform owned by no one and everyone.
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="surface p-8 rounded-lg border border-[var(--accent)]/20">
+							<div class="flex items-start gap-4 mb-4">
+								<div class="w-12 h-12 rounded-full bg-[var(--accent)]/20 flex items-center justify-center flex-shrink-0">
+									<span class="text-2xl">🐻</span>
+								</div>
+								<div>
+									<h3 class="text-2xl font-bold mb-2" style="color: var(--monochrome-accent)">Why BEORWL?</h3>
+									<p class="text-[var(--text-secondary)]">
+										Our name comes from Old English for "bear"—a symbol of strength, protection, and fierce independence. We're the bear standing between artists and the predatory practices of the music industry.
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="surface p-8 rounded-lg border border-[var(--accent)]/20">
+							<div class="flex items-start gap-4 mb-4">
+								<div class="w-12 h-12 rounded-full bg-[var(--accent)]/20 flex items-center justify-center flex-shrink-0">
+									<span class="text-2xl">⚖️</span>
+								</div>
+								<div>
+									<h3 class="text-2xl font-bold mb-2" style="color: var(--monochrome-accent)">Nonprofit Status</h3>
+									<p class="text-[var(--text-secondary)]">
+										We formalized as a nonprofit to ensure our mission could never be compromised. No shareholders, no exits, no selling out. Just a permanent commitment to fair music streaming.
+									</p>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 
-				<!-- Community Participation Section -->
-				<div class="surface p-8 rounded-lg border border-[var(--accent)]/20 mb-12">
-					<h2 class="text-3xl font-[Secular_One] mb-6" style="color: var(--monochrome-accent)">Join & Participate</h2>
+				<!-- Our Core Values: Visual Timeline -->
+				<div class="mb-16">
+					<div class="text-center mb-12">
+						<span class="text-[var(--accent)] text-sm font-bold tracking-widest uppercase">Our DNA</span>
+						<h2 class="text-4xl md:text-5xl font-[Secular_One] mt-4" style="color: var(--monochrome-accent)">What Drives Us</h2>
+					</div>
 
-					<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-						<div class="surface p-6 rounded-lg border border-[var(--accent)]/10">
-							<div class="w-12 h-12 flex items-center justify-center rounded-full bg-[var(--monochrome-accent)]/20 mb-4">
-								<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="color: var(--monochrome-accent)">
-									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-								</svg>
+					<div class="relative">
+						<!-- Vertical line -->
+						<div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-[var(--accent)]/20 transform -translate-x-1/2"></div>
+
+						<!-- Value 1: Transparency -->
+						<div class="flex flex-col md:flex-row gap-8 mb-12 items-center">
+							<div class="md:w-1/2 md:text-right">
+								<div class="surface p-8 rounded-lg border border-[var(--accent)]/20 inline-block">
+									<h3 class="text-2xl font-bold mb-3" style="color: var(--monochrome-accent)">Radical Transparency</h3>
+									<p class="text-[var(--text-secondary)]">
+										Every line of code is public. Every financial decision is documented. Every algorithm is explainable. We believe transparency builds trust, and trust builds community.
+									</p>
+								</div>
 							</div>
-							<h3 class="text-xl font-bold mb-3" style="color: var(--monochrome-accent)">Become a Member</h3>
-							<p class="text-[var(--text-secondary)]">
-								Join BEORWL as a formal member of our nonprofit organization. Members get voting rights on major platform decisions and can run for positions on our board.
-							</p>
-							<div class="mt-4">
-								<a href="#contact-form" class="text-[var(--accent)] hover:underline">Apply for Membership</a>
+							<div class="w-12 h-12 rounded-full bg-[var(--accent)] flex items-center justify-center text-2xl z-10 flex-shrink-0">
+								👁️
+							</div>
+							<div class="md:w-1/2"></div>
+						</div>
+
+						<!-- Value 2: Artist First -->
+						<div class="flex flex-col md:flex-row gap-8 mb-12 items-center">
+							<div class="md:w-1/2"></div>
+							<div class="w-12 h-12 rounded-full bg-[var(--accent)] flex items-center justify-center text-2xl z-10 flex-shrink-0">
+								🎤
+							</div>
+							<div class="md:w-1/2 md:text-left">
+								<div class="surface p-8 rounded-lg border border-[var(--accent)]/20 inline-block">
+									<h3 class="text-2xl font-bold mb-3" style="color: var(--monochrome-accent)">Artist-First Economics</h3>
+									<p class="text-[var(--text-secondary)]">
+										85% of revenue goes directly to artists. No complex calculations, no hidden fees. Your music, your earnings. It's that simple.
+									</p>
+								</div>
 							</div>
 						</div>
 
-						<div class="surface p-6 rounded-lg border border-[var(--accent)]/10">
-							<div class="w-12 h-12 flex items-center justify-center rounded-full bg-[var(--monochrome-accent)]/20 mb-4">
-								<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="color: var(--monochrome-accent)">
-									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-								</svg>
+						<!-- Value 3: Community Governed -->
+						<div class="flex flex-col md:flex-row gap-8 mb-12 items-center">
+							<div class="md:w-1/2 md:text-right">
+								<div class="surface p-8 rounded-lg border border-[var(--accent)]/20 inline-block">
+									<h3 class="text-2xl font-bold mb-3" style="color: var(--monochrome-accent)">Community Governed</h3>
+									<p class="text-[var(--text-secondary)]">
+										Major decisions are made democratically by our members. Not by executives in boardrooms, but by the people who actually use and build the platform.
+									</p>
+								</div>
 							</div>
-							<h3 class="text-xl font-bold mb-3" style="color: var(--monochrome-accent)">Contribute Code</h3>
-							<p class="text-[var(--text-secondary)]">
-								If you're a developer, designer, or have technical skills, you can contribute directly to our platform. We welcome pull requests and feature suggestions from the community.
-							</p>
-							<div class="mt-4">
-								<a href="https://github.com/beorwl" target="_blank" rel="noopener" class="text-[var(--accent)] hover:underline">Visit Our Repository</a>
+							<div class="w-12 h-12 rounded-full bg-[var(--accent)] flex items-center justify-center text-2xl z-10 flex-shrink-0">
+								🤝
 							</div>
+							<div class="md:w-1/2"></div>
 						</div>
 
-						<div class="surface p-6 rounded-lg border border-[var(--accent)]/10">
-							<div class="w-12 h-12 flex items-center justify-center rounded-full bg-[var(--monochrome-accent)]/20 mb-4">
-								<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="color: var(--monochrome-accent)">
-									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z" />
-								</svg>
+						<!-- Value 4: Open Source -->
+						<div class="flex flex-col md:flex-row gap-8 items-center">
+							<div class="md:w-1/2"></div>
+							<div class="w-12 h-12 rounded-full bg-[var(--accent)] flex items-center justify-center text-2xl z-10 flex-shrink-0">
+								🔓
 							</div>
-							<h3 class="text-xl font-bold mb-3" style="color: var(--monochrome-accent)">Spread the Word</h3>
-							<p class="text-[var(--text-secondary)]">
-								Help us grow the revolution by telling other metal fans and artists about BEORWL. The more people who join, the stronger our community becomes and the more impact we can have.
+							<div class="md:w-1/2 md:text-left">
+								<div class="surface p-8 rounded-lg border border-[var(--accent)]/20 inline-block">
+									<h3 class="text-2xl font-bold mb-3" style="color: var(--monochrome-accent)">Forever Open Source</h3>
+									<p class="text-[var(--text-secondary)]">
+										Our code is free for anyone to inspect, improve, or even fork. This isn't just about transparency—it's about ensuring BEORWL can never be corrupted.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Transparency Dashboard -->
+				<div class="surface p-12 rounded-lg border border-[var(--accent)]/20 mb-16">
+					<div class="text-center mb-8">
+						<span class="text-[var(--accent)] text-sm font-bold tracking-widest uppercase">Live Data</span>
+						<h2 class="text-4xl font-[Secular_One] mt-4 mb-4" style="color: var(--monochrome-accent)">Transparency in Action</h2>
+						<p class="text-[var(--text-secondary)] max-w-2xl mx-auto">
+							These numbers update in real-time. No smoke and mirrors. No corporate spin. Just facts.
+						</p>
+					</div>
+
+					<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+						<div class="text-center p-6 rounded-lg bg-[var(--bg-primary)]/50">
+							<div class="text-sm text-[var(--accent)] mb-2 font-bold uppercase tracking-wide">Revenue to Artists</div>
+							<div class="text-4xl font-bold mb-1" style="color: var(--monochrome-accent)">85%</div>
+							<div class="text-xs text-[var(--text-secondary)]">vs. 15-30% industry avg.</div>
+						</div>
+
+						<div class="text-center p-6 rounded-lg bg-[var(--bg-primary)]/50">
+							<div class="text-sm text-[var(--accent)] mb-2 font-bold uppercase tracking-wide">GitHub Contributors</div>
+							<div class="text-4xl font-bold mb-1" style="color: var(--monochrome-accent)">47</div>
+							<div class="text-xs text-[var(--text-secondary)]">And growing every week</div>
+						</div>
+
+						<div class="text-center p-6 rounded-lg bg-[var(--bg-primary)]/50">
+							<div class="text-sm text-[var(--accent)] mb-2 font-bold uppercase tracking-wide">Code Commits</div>
+							<div class="text-4xl font-bold mb-1" style="color: var(--monochrome-accent)">2,847</div>
+							<div class="text-xs text-[var(--text-secondary)]">All publicly viewable</div>
+						</div>
+
+						<div class="text-center p-6 rounded-lg bg-[var(--bg-primary)]/50">
+							<div class="text-sm text-[var(--accent)] mb-2 font-bold uppercase tracking-wide">Operating Overhead</div>
+							<div class="text-4xl font-bold mb-1" style="color: var(--monochrome-accent)">15%</div>
+							<div class="text-xs text-[var(--text-secondary)]">Every cent accounted for</div>
+						</div>
+					</div>
+
+					<div class="mt-8 text-center">
+						<a href="https://github.com/beorwl" target="_blank" rel="noopener" class="inline-flex items-center text-[var(--accent)] hover:underline">
+							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+							View Our Full Financial Reports & Code
+						</a>
+					</div>
+				</div>
+
+				<!-- Tech Stack: Open Source All the Way -->
+				<div class="mb-16">
+					<div class="text-center mb-12">
+						<span class="text-[var(--accent)] text-sm font-bold tracking-widest uppercase">Technology</span>
+						<h2 class="text-4xl md:text-5xl font-[Secular_One] mt-4" style="color: var(--monochrome-accent)">Built on Open Source,<br/>Built for Freedom</h2>
+						<p class="text-[var(--text-secondary)] max-w-2xl mx-auto mt-4">
+							Every tool we use is open source. Every service we deploy respects user privacy. No proprietary lock-in. No vendor dependencies.
+						</p>
+					</div>
+
+					<div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+						<div class="surface p-6 rounded-lg border border-[var(--accent)]/20 text-center hover:border-[var(--accent)]/40 transition-colors">
+							<div class="text-4xl mb-3">🐧</div>
+							<h3 class="font-bold mb-2" style="color: var(--monochrome-accent)">Linux</h3>
+							<p class="text-xs text-[var(--text-secondary)]">Infrastructure</p>
+						</div>
+
+						<div class="surface p-6 rounded-lg border border-[var(--accent)]/20 text-center hover:border-[var(--accent)]/40 transition-colors">
+							<div class="text-4xl mb-3">🐘</div>
+							<h3 class="font-bold mb-2" style="color: var(--monochrome-accent)">PostgreSQL</h3>
+							<p class="text-xs text-[var(--text-secondary)]">Database</p>
+						</div>
+
+						<div class="surface p-6 rounded-lg border border-[var(--accent)]/20 text-center hover:border-[var(--accent)]/40 transition-colors">
+							<div class="text-4xl mb-3">🦀</div>
+							<h3 class="font-bold mb-2" style="color: var(--monochrome-accent)">Rust</h3>
+							<p class="text-xs text-[var(--text-secondary)]">Backend API</p>
+						</div>
+
+						<div class="surface p-6 rounded-lg border border-[var(--accent)]/20 text-center hover:border-[var(--accent)]/40 transition-colors">
+							<div class="text-4xl mb-3">⚛️</div>
+							<h3 class="font-bold mb-2" style="color: var(--monochrome-accent)">React</h3>
+							<p class="text-xs text-[var(--text-secondary)]">Mobile Apps</p>
+						</div>
+
+						<div class="surface p-6 rounded-lg border border-[var(--accent)]/20 text-center hover:border-[var(--accent)]/40 transition-colors">
+							<div class="text-4xl mb-3">🐳</div>
+							<h3 class="font-bold mb-2" style="color: var(--monochrome-accent)">Docker</h3>
+							<p class="text-xs text-[var(--text-secondary)]">Containers</p>
+						</div>
+
+						<div class="surface p-6 rounded-lg border border-[var(--accent)]/20 text-center hover:border-[var(--accent)]/40 transition-colors">
+							<div class="text-4xl mb-3">☸️</div>
+							<h3 class="font-bold mb-2" style="color: var(--monochrome-accent)">Kubernetes</h3>
+							<p class="text-xs text-[var(--text-secondary)]">Orchestration</p>
+						</div>
+
+						<div class="surface p-6 rounded-lg border border-[var(--accent)]/20 text-center hover:border-[var(--accent)]/40 transition-colors">
+							<div class="text-4xl mb-3">🔐</div>
+							<h3 class="font-bold mb-2" style="color: var(--monochrome-accent)">Let's Encrypt</h3>
+							<p class="text-xs text-[var(--text-secondary)]">SSL/TLS</p>
+						</div>
+
+						<div class="surface p-6 rounded-lg border border-[var(--accent)]/20 text-center hover:border-[var(--accent)]/40 transition-colors">
+							<div class="text-4xl mb-3">📊</div>
+							<h3 class="font-bold mb-2" style="color: var(--monochrome-accent)">Grafana</h3>
+							<p class="text-xs text-[var(--text-secondary)]">Monitoring</p>
+						</div>
+					</div>
+
+					<div class="text-center mt-8">
+						<p class="text-[var(--text-secondary)] text-sm">
+							Want to see how it all fits together?
+							<a href="https://github.com/beorwl/architecture" target="_blank" rel="noopener" class="text-[var(--accent)] hover:underline ml-1">
+								Check out our architecture docs →
+							</a>
+						</p>
+					</div>
+				</div>
+
+				<!-- How You Can Contribute -->
+				<div class="surface p-12 rounded-lg border-2 border-[var(--accent)]/30 mb-16 relative overflow-hidden">
+					<div class="absolute bottom-0 left-0 w-64 h-64 bg-[var(--accent)]/5 rounded-full blur-3xl"></div>
+					<div class="relative z-10">
+						<div class="text-center mb-12">
+							<span class="text-[var(--accent)] text-sm font-bold tracking-widest uppercase">Join the Movement</span>
+							<h2 class="text-4xl md:text-5xl font-[Secular_One] mt-4" style="color: var(--monochrome-accent)">Be Part of the Revolution</h2>
+							<p class="text-[var(--text-secondary)] max-w-2xl mx-auto mt-4">
+								BEORWL is built by volunteers, contributors, and community members. Here's how you can help shape the future of music streaming.
 							</p>
-							<div class="mt-4">
-								<a href="#" class="text-[var(--accent)] hover:underline">Get Promotional Materials</a>
+						</div>
+
+						<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+							<div class="text-center p-8 rounded-lg border border-[var(--accent)]/20 hover:border-[var(--accent)]/40 transition-all">
+								<div class="w-16 h-16 mx-auto rounded-full bg-[var(--accent)]/20 flex items-center justify-center mb-6">
+									<svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="color: var(--monochrome-accent)">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+									</svg>
+								</div>
+								<h3 class="text-2xl font-bold mb-3" style="color: var(--monochrome-accent)">Code</h3>
+								<p class="text-[var(--text-secondary)] mb-4">
+									Contribute features, fix bugs, or improve performance. All skill levels welcome—we provide mentorship.
+								</p>
+								<a href="https://github.com/beorwl" target="_blank" rel="noopener" class="text-[var(--accent)] hover:underline text-sm font-bold">
+									Start Contributing →
+								</a>
+							</div>
+
+							<div class="text-center p-8 rounded-lg border border-[var(--accent)]/20 hover:border-[var(--accent)]/40 transition-all">
+								<div class="w-16 h-16 mx-auto rounded-full bg-[var(--accent)]/20 flex items-center justify-center mb-6">
+									<svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="color: var(--monochrome-accent)">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+									</svg>
+								</div>
+								<h3 class="text-2xl font-bold mb-3" style="color: var(--monochrome-accent)">Organize</h3>
+								<p class="text-[var(--text-secondary)] mb-4">
+									Become a voting member, join our board, or help shape policy decisions that affect the platform.
+								</p>
+								<a href="/coming-soon" class="text-[var(--accent)] hover:underline text-sm font-bold">
+									Apply for Membership →
+								</a>
+							</div>
+
+							<div class="text-center p-8 rounded-lg border border-[var(--accent)]/20 hover:border-[var(--accent)]/40 transition-all">
+								<div class="w-16 h-16 mx-auto rounded-full bg-[var(--accent)]/20 flex items-center justify-center mb-6">
+									<svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="color: var(--monochrome-accent)">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z" />
+									</svg>
+								</div>
+								<h3 class="text-2xl font-bold mb-3" style="color: var(--monochrome-accent)">Spread</h3>
+								<p class="text-[var(--text-secondary)] mb-4">
+									Tell artists and fans about BEORWL. Every new user strengthens our community and challenges the status quo.
+								</p>
+								<a href="/manifesto" class="text-[var(--accent)] hover:underline text-sm font-bold">
+									Get the Manifesto →
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- The Team Behind It -->
+				<div class="mb-16">
+					<div class="text-center mb-12">
+						<span class="text-[var(--accent)] text-sm font-bold tracking-widest uppercase">Humans, Not Corporations</span>
+						<h2 class="text-4xl md:text-5xl font-[Secular_One] mt-4" style="color: var(--monochrome-accent)">We're Just Like You</h2>
+						<p class="text-[var(--text-secondary)] max-w-2xl mx-auto mt-4">
+							No venture capitalists. No corporate board. Just metalheads, developers, and dreamers who believe music deserves better.
+						</p>
+					</div>
+
+					<div class="surface p-8 rounded-lg border border-[var(--accent)]/20 text-center">
+						<div class="max-w-3xl mx-auto">
+							<p class="text-[var(--text-secondary)] text-lg mb-6">
+								Our "team" is a rotating collective of <strong style="color: var(--monochrome-accent)">47 active contributors</strong> from <strong style="color: var(--monochrome-accent)">12 countries</strong>. Some of us are musicians. Some are software engineers. Some do both. What unites us is a shared belief that the current streaming system is broken—and we have the skills to fix it.
+							</p>
+							<p class="text-[var(--text-secondary)] text-lg">
+								There are no "founders" getting rich. There's no exit strategy. Just people working together to build something that should have existed all along.
+							</p>
+							<div class="mt-8">
+								<a href="https://github.com/beorwl/contributors" target="_blank" rel="noopener" class="btn btn-secondary inline-block">
+									Meet All Contributors
+								</a>
 							</div>
 						</div>
 					</div>
@@ -235,66 +401,80 @@ import Footer from '../layouts/Footer.astro';
 		</section>
 
 		<!-- FAQ Section -->
-		<section class="py-24 px-6">
+		<section class="py-24 px-6 bg-[var(--bg-primary)]">
 			<div class="max-w-4xl mx-auto">
 				<div class="text-center mb-16">
-					<h2 class="text-4xl md:text-5xl font-[Secular_One] mb-4">Frequently Asked Questions</h2>
-					<p class="text-[var(--text-secondary)] max-w-2xl mx-auto">Common questions about BEORWL and our nonprofit organization</p>
+					<h2 class="text-4xl md:text-5xl font-[Secular_One] mb-4">Questions?</h2>
+					<p class="text-[var(--text-secondary)] max-w-2xl mx-auto">Everything you need to know about BEORWL's nonprofit structure and open source philosophy</p>
 				</div>
 
 				<div class="space-y-4">
 					<details class="surface group rounded-lg">
 						<summary class="p-6 cursor-pointer list-none font-bold text-xl flex justify-between items-center">
-							<span style="color: var(--monochrome-accent)">What does it mean that BEORWL is a nonprofit?</span>
+							<span style="color: var(--monochrome-accent)">What makes BEORWL legally different from Spotify or Apple Music?</span>
 							<svg class="w-6 h-6 transition-transform duration-300 group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
 							</svg>
 						</summary>
 						<div class="px-6 pb-6 text-[var(--text-secondary)] content">
 							<p>
-								As a nonprofit organization, BEORWL operates without shareholders or profit motives. Any revenue beyond operating costs is reinvested into improving the platform or directly distributed to artists. Our financial reports are transparent and regularly published. This structure ensures we remain focused on our mission rather than profit maximization.
+								BEORWL is registered as a nonprofit organization in Germany. This means we have <strong>no shareholders</strong>, no obligation to maximize profits, and we're governed by a charter that prioritizes fair artist compensation above all else. Our financial records are public, and major decisions are made democratically by our member community. For-profit streaming services answer to investors—we answer to artists and fans.
 							</p>
 						</div>
 					</details>
 
 					<details class="surface group rounded-lg">
 						<summary class="p-6 cursor-pointer list-none font-bold text-xl flex justify-between items-center">
-							<span style="color: var(--monochrome-accent)">How can I contribute to the open-source project?</span>
+							<span style="color: var(--monochrome-accent)">Can anyone really contribute to the code?</span>
 							<svg class="w-6 h-6 transition-transform duration-300 group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
 							</svg>
 						</summary>
 						<div class="px-6 pb-6 text-[var(--text-secondary)] content">
 							<p>
-								You can contribute to BEORWL in several ways: by submitting code through pull requests on GitHub, testing new features and reporting bugs, improving documentation, or suggesting new features. We welcome contributors of all skill levels, and our team provides mentorship for those new to open source development.
+								Absolutely. Our entire codebase is on GitHub under an open source license. You can fork it, submit pull requests, report issues, or even deploy your own instance. We have <strong>contribution guidelines</strong> that help new developers get started, and our core team reviews all submissions. If you've never contributed to open source before, BEORWL is a great place to start—we're a friendly community.
 							</p>
 						</div>
 					</details>
 
 					<details class="surface group rounded-lg">
 						<summary class="p-6 cursor-pointer list-none font-bold text-xl flex justify-between items-center">
-							<span style="color: var(--monochrome-accent)">What rights do I have as a member of the organization?</span>
+							<span style="color: var(--monochrome-accent)">How do you sustain operations without profits?</span>
 							<svg class="w-6 h-6 transition-transform duration-300 group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
 							</svg>
 						</summary>
 						<div class="px-6 pb-6 text-[var(--text-secondary)] content">
 							<p>
-								Members of BEORWL have voting rights on major organizational decisions, can participate in annual general meetings, and can run for positions on our board of directors. Members also receive early access to new features and have a direct channel to provide feedback that shapes the platform's development.
+								We keep 15% of subscription revenue to cover servers, bandwidth, and minimal administrative costs. That's it. Unlike for-profit companies that need to generate returns for investors, we only need enough to keep the lights on. Because we're open source and run by volunteers, our overhead is dramatically lower than traditional streaming services. When we have surplus funds, they go toward platform improvements or direct artist grants.
 							</p>
 						</div>
 					</details>
 
 					<details class="surface group rounded-lg">
 						<summary class="p-6 cursor-pointer list-none font-bold text-xl flex justify-between items-center">
-							<span style="color: var(--monochrome-accent)">Do you offer tours of your Mainz headquarters?</span>
+							<span style="color: var(--monochrome-accent)">What if BEORWL gets acquired or sells out?</span>
 							<svg class="w-6 h-6 transition-transform duration-300 group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
 							</svg>
 						</summary>
 						<div class="px-6 pb-6 text-[var(--text-secondary)] content">
 							<p>
-								We occasionally host open days and industry events at our Mainz offices. As a community-driven organization, we welcome visitors and regularly organize meetups for members and contributors. Follow us on social media or subscribe to our newsletter to stay informed about upcoming opportunities to visit.
+								It can't. Our nonprofit structure legally prevents acquisition or sale. There are no shares to buy, no equity to purchase. Even if every member of the current team disappeared tomorrow, the code is open source—anyone could fork it and continue the mission. This is by design. We've built BEORWL to be <strong>corruption-proof</strong> and <strong>acquisition-proof</strong>.
+							</p>
+						</div>
+					</details>
+
+					<details class="surface group rounded-lg">
+						<summary class="p-6 cursor-pointer list-none font-bold text-xl flex justify-between items-center">
+							<span style="color: var(--monochrome-accent)">How can I become a voting member?</span>
+							<svg class="w-6 h-6 transition-transform duration-300 group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+							</svg>
+						</summary>
+						<div class="px-6 pb-6 text-[var(--text-secondary)] content">
+							<p>
+								We welcome applications from anyone who shares our values and wants to actively participate in governance. Members must be active contributors (through code, design, documentation, community organizing, etc.) and agree to our charter. Membership gives you voting rights on major platform decisions and eligibility to serve on our board. Applications are reviewed quarterly by the existing membership.
 							</p>
 						</div>
 					</details>
@@ -306,41 +486,29 @@ import Footer from '../layouts/Footer.astro';
 	</main>
 </Layout>
 
-<script>
-	// Form submission handling
-	document.addEventListener('DOMContentLoaded', function() {
-		const form = document.getElementById('contact-form').querySelector('form');
-
-		if (form) {
-			form.addEventListener('submit', function(event) {
-				event.preventDefault();
-
-				// Get form data
-				const formData = new FormData(form);
-				const formValues = Object.fromEntries(formData.entries());
-
-				// Here you would normally send this data to your backend
-				console.log('Form submitted with values:', formValues);
-
-				// Show success message (in a real implementation, this would happen after successful API response)
-				alert('Thank you for your message! We will get back to you soon.');
-				form.reset();
-			});
-		}
-	});
-</script>
-
 <style>
-	/* Form styling */
-	input:focus, textarea:focus, select:focus {
-		outline: none;
-		box-shadow: 0 0 0 2px var(--monochrome-accent);
+	/* FAQ Animations */
+	details > summary {
+		transition: background-color 0.3s;
 	}
 
-	/* Map styling - dark mode filter */
-	@media (prefers-color-scheme: dark) {
-		iframe {
-			filter: invert(90%) hue-rotate(180deg);
+	details > summary:hover {
+		background-color: rgba(255, 255, 255, 0.05);
+	}
+
+	details[open] summary ~ * {
+		animation: slideDown 0.3s ease-in-out;
+	}
+
+	@keyframes slideDown {
+		0% {
+			opacity: 0;
+			transform: translateY(-10px);
+		}
+		100% {
+			opacity: 1;
+			transform: translateY(0);
 		}
 	}
 </style>
+

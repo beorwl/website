@@ -93,6 +93,7 @@ import StreamingCostSlider from "../components/StreamingCostSlider.astro";
                                 <p class="text-[var(--text-secondary)]">You can integrate your own music library, upload your audio files and stream them from anywhere.</p>
                             </div>
                         </div>
+               
                     </div>
                     <div class="relative">
                         <div class="rounded-lg overflow-hidden">
@@ -170,24 +171,35 @@ import StreamingCostSlider from "../components/StreamingCostSlider.astro";
 			</div>
 		</section>
 
-
-
         <section class="py-24 px-6">
             <div class="max-w-5xl mx-auto">
                 <div class="text-center mb-16">
-                            <span class="px-3 py-1 rounded-full text-[10px] md:text-xs tracking-widest uppercase bg-[var(--bg-primary)] text-[var(--accent)] border border-[var(--accent)]/40 inline-block mb-4">
-                            Integrate Your Own Library
-                       </span>
+      <span
+              class="px-3 py-1 rounded-full text-[10px] md:text-xs tracking-widest uppercase bg-[var(--bg-primary)] text-[var(--accent)] border border-[var(--accent)]/40 inline-block mb-4"
+      >
+        Integrate Your Own Library
+      </span>
 
-                    <h2 class="text-4xl md:text-5xl font-[Secular_One] mb-4">Missing Your Favorite Artists?</h2>
-                    <p class="text-[var(--text-secondary)] max-w-2xl mx-auto">Simply upload your own audio files to your optional cloud storage and stream your personal music library from anywhere.</p>
+                    <h2 class="text-4xl md:text-5xl font-[Secular_One] mb-4">
+                        Missing Your Favorite Artists?
+                    </h2>
+                    <p class="text-[var(--text-secondary)] max-w-2xl mx-auto">
+                        Simply upload your own audio files to your optional cloud storage and
+                        stream your personal music library from anywhere.
+                    </p>
                 </div>
 
                 <!-- Cloud Storage Pricing -->
-                <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mt-12">
-                    <div class="surface p-8 rounded-lg transition-all">
-                        <div class="text-center">
-                            <h3 class="text-2xl font-bold mb-2" style="color: var(--monochrome-accent)">Free</h3>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mt-12 items-stretch">
+                    <!-- Free Plan -->
+                    <div class="surface p-8 rounded-lg transition-all flex flex-col">
+                        <div class="text-center flex flex-col flex-1">
+                            <h3
+                                    class="text-2xl font-bold mb-2"
+                                    style="color: var(--monochrome-accent)"
+                            >
+                                Free
+                            </h3>
                             <div class="mb-6">
                                 <span class="text-5xl font-bold">0€</span>
                                 <span class="text-[var(--text-secondary)]">/month</span>
@@ -203,14 +215,21 @@ import StreamingCostSlider from "../components/StreamingCostSlider.astro";
                                     <span>Stream from anywhere</span>
                                 </li>
                             </ul>
-                            <a href="/coming-soon" class="btn btn-secondary w-full">Get Started</a>
+                            <a href="/coming-soon" class="btn btn-secondary w-full mt-auto"
+                            >Get Started</a
+                            >
                         </div>
                     </div>
 
-                    <!-- 10GB Plan -->
-                    <div class="surface p-8 rounded-lg transition-all">
-                        <div class="text-center">
-                            <h3 class="text-2xl font-bold mb-2" style="color: var(--monochrome-accent)">Small</h3>
+                    <!-- Small Plan -->
+                    <div class="surface p-8 rounded-lg transition-all flex flex-col">
+                        <div class="text-center flex flex-col flex-1">
+                            <h3
+                                    class="text-2xl font-bold mb-2"
+                                    style="color: var(--monochrome-accent)"
+                            >
+                                Small
+                            </h3>
                             <div class="mb-6">
                                 <span class="text-5xl font-bold">2€</span>
                                 <span class="text-[var(--text-secondary)]">/month</span>
@@ -226,14 +245,21 @@ import StreamingCostSlider from "../components/StreamingCostSlider.astro";
                                     <span>Stream from anywhere</span>
                                 </li>
                             </ul>
-                            <a href="/coming-soon" class="btn btn-secondary w-full">Get Started</a>
+                            <a href="/coming-soon" class="btn btn-secondary w-full mt-auto"
+                            >Get Started</a
+                            >
                         </div>
                     </div>
 
-                    <!-- 50GB Plan -->
-                    <div class="surface p-8 rounded-lg  transition-all">
-                        <div class="text-center">
-                            <h3 class="text-2xl font-bold mb-2" style="color: var(--monochrome-accent)">Medium</h3>
+                    <!-- Medium Plan -->
+                    <div class="surface p-8 rounded-lg transition-all flex flex-col">
+                        <div class="text-center flex flex-col flex-1">
+                            <h3
+                                    class="text-2xl font-bold mb-2"
+                                    style="color: var(--monochrome-accent)"
+                            >
+                                Medium
+                            </h3>
                             <div class="mb-6">
                                 <span class="text-5xl font-bold">4€</span>
                                 <span class="text-[var(--text-secondary)]">/month</span>
@@ -249,14 +275,21 @@ import StreamingCostSlider from "../components/StreamingCostSlider.astro";
                                     <span>Stream from anywhere</span>
                                 </li>
                             </ul>
-                            <a href="/coming-soon" class="btn btn-secondary w-full">Get Started</a>
+                            <a href="/coming-soon" class="btn btn-secondary w-full mt-auto"
+                            >Get Started</a
+                            >
                         </div>
                     </div>
 
-                    <!-- 100GB Plan -->
-                    <div class="surface p-8 rounded-lg  transition-all">
-                        <div class="text-center">
-                            <h3 class="text-2xl font-bold mb-2" style="color: var(--monochrome-accent)">Large</h3>
+                    <!-- Large Plan -->
+                    <div class="surface p-8 rounded-lg transition-all flex flex-col">
+                        <div class="text-center flex flex-col flex-1">
+                            <h3
+                                    class="text-2xl font-bold mb-2"
+                                    style="color: var(--monochrome-accent)"
+                            >
+                                Large
+                            </h3>
                             <div class="mb-6">
                                 <span class="text-5xl font-bold">9€</span>
                                 <span class="text-[var(--text-secondary)]">/month</span>
@@ -265,25 +298,29 @@ import StreamingCostSlider from "../components/StreamingCostSlider.astro";
                             <ul class="text-left space-y-3 mb-8 text-[var(--text-secondary)]">
                                 <li class="flex items-start gap-2">
                                     <span class="text-[var(--accent)] mt-1">✓</span>
-                                    <span> Upload~25,000 Songs</span>
+                                    <span>Upload ~25,000 Songs</span>
                                 </li>
                                 <li class="flex items-start gap-2">
                                     <span class="text-[var(--accent)] mt-1">✓</span>
                                     <span>Stream from anywhere</span>
                                 </li>
                             </ul>
-                            <a href="/coming-soon" class="btn btn-secondary w-full">Get Started</a>
+                            <a href="/coming-soon" class="btn btn-secondary w-full mt-auto"
+                            >Get Started</a
+                            >
                         </div>
                     </div>
                 </div>
 
                 <div class="text-center mt-12">
                     <p class="text-[var(--text-secondary)] text-sm">
-                        Cloud storage is completely optional. You can still stream our entire library without it.
+                        Cloud storage is completely optional. You can still stream our entire
+                        library without it.
                     </p>
                 </div>
             </div>
         </section>
+
 
 
         <!-- FAQ Section -->
@@ -382,43 +419,3 @@ import StreamingCostSlider from "../components/StreamingCostSlider.astro";
 	</main>
 </Layout>
 
-<style>
-/* FAQ Animations */
-details > summary {
-    transition: background-color 0.3s;
-}
-
-details > summary:hover {
-    background-color: rgba(255, 255, 255, 0.05);
-}
-
-details[open] summary ~ * {
-    animation: slideDown 0.3s ease-in-out;
-}
-
-details:not([open]) summary ~ * {
-    animation: slideUp 0.3s ease-in-out;
-}
-
-@keyframes slideDown {
-    0% {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes slideUp {
-    0% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    100% {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-}
-</style>
