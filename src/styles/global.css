@@ -2,16 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Force Tailwind preflight default border-color to our monochrome palette */
+@layer base {
+  *,
+  ::before,
+  ::after {
+    border-color: var(--monochrome-accent);
+  }
+}
+
 :root {
   --monochrome-bg: #1d2323;
   --monochrome-text: #ED4341;
   --monochrome-accent: #ED4341;
   --monochrome-surface: #252a2a;
-  --monochrome-muted: color-mix(in srgb, var(--monochrome-accent) 90%, transparent);
+  --monochrome-muted: rgba(237, 67, 65, 0.9);
 
   --bg-primary: var(--monochrome-bg);
   --bg-surface: var(--monochrome-surface);
-  --text-primary: var(--monochrome-muted);
+  --text-primary: var(--monochrome-text);
   --text-secondary: var(--monochrome-muted);
   --accent: var(--monochrome-accent);
 }
@@ -52,7 +61,7 @@
   }
 
   .btn-secondary:hover {
-      background: color-mix(in srgb, var(--monochrome-accent) 10%, transparent);
+      background: rgba(237, 67, 65, 0.1); /* Replaced color-mix with RGBA */
   }
 
   .surface { background: var(--bg-surface); }

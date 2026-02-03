@@ -12,7 +12,11 @@ export default {
         'surface': 'var(--bg-surface)',
       }
     },
+    borderColor: {
+      // Used by Tailwind preflight for: *, ::before, ::after { border-color: ... }
+      // Fallback ensures a real color even if CSS variables aren't available for some reason.
+      DEFAULT: 'var(--monochrome-accent, #ED4341)'
+    }
   },
   plugins: [],
 }
-
