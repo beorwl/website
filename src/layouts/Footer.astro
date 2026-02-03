@@ -1,5 +1,6 @@
 ---
 const currentYear = new Date().getFullYear();
+const base = import.meta.env.BASE_URL;
 ---
 
 <footer class="py-12 mt-auto border-t border-[var(--monochrome-text)]/10">
@@ -13,12 +14,12 @@ const currentYear = new Date().getFullYear();
         <div>
             <h4 class="text-sm font-semibold text-[var(--text-primary)] mb-4 uppercase tracking-wider">For Artists</h4>
             <nav class="flex flex-col space-y-2">
-                <a href="/coming-soon" class="text-sm text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors">Upload Music</a>
-                <a href="/label-deal-check" class="text-sm text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors">Free Labeldeal Check</a>
+                <a href={`${base}coming-soon`} class="text-sm text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors">Upload Music</a>
+                <a href={`${base}label-deal-check`} class="text-sm text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors">Free Labeldeal Check</a>
             </nav>
             <h4 class="text-sm font-semibold text-[var(--text-primary)] mb-4 mt-4 uppercase tracking-wider">For Labels</h4>
             <nav class="flex flex-col space-y-2">
-                <a href="/coming-soon" class="text-sm text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors">Upload Your Artists</a>
+                <a href={`${base}coming-soon`} class="text-sm text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors">Upload Your Artists</a>
             </nav>
         </div>
 
@@ -26,8 +27,8 @@ const currentYear = new Date().getFullYear();
       <div>
           <h4 class="text-sm font-semibold text-[var(--text-primary)] mb-4 uppercase tracking-wider">Links</h4>
           <nav class="flex flex-col space-y-2">
-              <a href="/coming-soon" class="text-sm text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors">Join Us</a>
-              <a href="/coming-soon" class="text-sm text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors">Donate</a>
+              <a href={`${base}coming-soon`} class="text-sm text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors">Join Us</a>
+              <a href={`${base}coming-soon`} class="text-sm text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors">Donate</a>
           </nav>
       </div>
 
@@ -74,9 +75,9 @@ const currentYear = new Date().getFullYear();
         <p class="text-sm text-[var(--text-secondary)]">© {currentYear} ORWL</p>
       </div>
       <nav class="flex space-x-6 text-xs">
-        <a href="/about" class="text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors">Imprint</a>
-        <a href="/about" class="text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors">Terms</a>
-        <a href="/about" class="text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors">Privacy</a>
+        <a href={`${base}imprint`} class="text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors">Imprint</a>
+        <a href={`${base}terms`} class="text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors">Terms</a>
+        <a href={`${base}privacy`} class="text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors">Privacy</a>
       </nav>
     </div>
   </div>

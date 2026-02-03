@@ -3,6 +3,8 @@ import Layout from '../layouts/Layout.astro';
 import Navigation from '../layouts/Navigation.astro';
 import Footer from "../layouts/Footer.astro";
 import StreamingCostSlider from "../components/StreamingCostSlider.astro";
+
+const base = import.meta.env.BASE_URL;
 ---
 
 <Layout title="ORWL ☉ Time To Stream Fair">
@@ -38,11 +40,11 @@ import StreamingCostSlider from "../components/StreamingCostSlider.astro";
                     Your music, your rules. Take back control of your music library, keep your collection yours and stream the way it was meant to be. Fair and Independent.
 				</p>
 				<div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="/coming-soon" class="btn btn-primary">
+                    <a href={`${base}coming-soon`} class="btn btn-primary">
                         Join The Community
                     </a>
 
-					<a href="/manifesto" class="btn btn-secondary">
+					<a href={`${base}manifesto`} class="btn btn-secondary">
 						Read The Manifesto
 					</a>
 				</div>
@@ -166,7 +168,7 @@ import StreamingCostSlider from "../components/StreamingCostSlider.astro";
 				</div>
 
 				<div class="text-center mt-12">
-					<a href="/manifesto#stream2own" class="btn btn-secondary">Learn More</a>
+					<a href={`${base}manifesto#stream2own`} class="btn btn-secondary">Learn More</a>
 				</div>
 			</div>
 		</section>
@@ -215,7 +217,7 @@ import StreamingCostSlider from "../components/StreamingCostSlider.astro";
                                     <span>Stream from anywhere</span>
                                 </li>
                             </ul>
-                            <a href="/coming-soon" class="btn btn-secondary w-full mt-auto"
+                            <a href={`${base}coming-soon`} class="btn btn-secondary w-full mt-auto"
                             >Get Started</a
                             >
                         </div>
@@ -245,7 +247,7 @@ import StreamingCostSlider from "../components/StreamingCostSlider.astro";
                                     <span>Stream from anywhere</span>
                                 </li>
                             </ul>
-                            <a href="/coming-soon" class="btn btn-secondary w-full mt-auto"
+                            <a href={`${base}coming-soon`} class="btn btn-secondary w-full mt-auto"
                             >Get Started</a
                             >
                         </div>
@@ -275,7 +277,7 @@ import StreamingCostSlider from "../components/StreamingCostSlider.astro";
                                     <span>Stream from anywhere</span>
                                 </li>
                             </ul>
-                            <a href="/coming-soon" class="btn btn-secondary w-full mt-auto"
+                            <a href={`${base}coming-soon`} class="btn btn-secondary w-full mt-auto"
                             >Get Started</a
                             >
                         </div>
@@ -305,7 +307,7 @@ import StreamingCostSlider from "../components/StreamingCostSlider.astro";
                                     <span>Stream from anywhere</span>
                                 </li>
                             </ul>
-                            <a href="/coming-soon" class="btn btn-secondary w-full mt-auto"
+                            <a href={`${base}coming-soon`} class="btn btn-secondary w-full mt-auto"
                             >Get Started</a
                             >
                         </div>
@@ -409,7 +411,7 @@ import StreamingCostSlider from "../components/StreamingCostSlider.astro";
 				</div>
 
 				<div class="text-center mt-12">
-					<a href="/manifesto" class="btn btn-secondary">Read The Manifesto</a>
+					<a href={`${base}manifesto`} class="btn btn-secondary">Read The Manifesto</a>
 				</div>
 			</div>
 		</section>
