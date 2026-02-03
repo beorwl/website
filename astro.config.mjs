@@ -6,8 +6,7 @@ import tailwindcss from '@tailwindcss/vite';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://beorwl.github.io',
-  // Root domain deployment (user/org site)
-  base: '/',
+  base: '/website',
   output: 'static',
   vite: {
     plugins: [tailwindcss()]
