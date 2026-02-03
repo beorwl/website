@@ -1,15 +1,12 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
-
-import tailwindcss from '@tailwindcss/vite';
+import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://beorwl.github.io',
-  // Root domain deployment (user/org site)
-  base: '/',
+  // Project site deployment: https://beorwl.github.io/website/
+  base: '/website',
   output: 'static',
-  vite: {
-    plugins: [tailwindcss()]
-  }
+  integrations: [tailwind()]
 });
