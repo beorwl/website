@@ -34,6 +34,10 @@ jobs:
         env:
           NODE_ENV: production
 
+      # Prevent GitHub Pages from running Jekyll (important for files/folders starting with underscores)
+      - name: Disable Jekyll
+        run: touch dist/.nojekyll
+
       # SPA/404 fallback for client-side routes (safe even if you don't need it)
       - name: Add 404 fallback
         run: cp dist/index.html dist/404.html
