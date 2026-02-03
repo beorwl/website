@@ -40,11 +40,11 @@ const base = import.meta.env.BASE_URL;
                     <!-- Dropdown Content -->
                     <div class="absolute left-0 top-full pt-2 opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-200">
                         <div class="w-64 surface rounded-lg border border-[var(--monochrome-text)]/20 shadow-lg shadow-black/50 backdrop-blur-xl overflow-hidden">
-                            <a href={`${base}coming-soon`} class="block p-4 hover:bg-[var(--monochrome-text)]/5 transition-colors">
+                            <a href={`${base}/coming-soon`} class="block p-4 hover:bg-[var(--monochrome-text)]/5 transition-colors">
                                 <div class="font-semibold mb-1" style="color: var(--monochrome-text)">Become a Member</div>
                                 <div class="text-sm text-[var(--text-secondary)]">Contribute to the organization</div>
                             </a>
-                            <a href={`${base}coming-soon`} class="block p-4 hover:bg-[var(--monochrome-text)]/5 transition-colors">
+                            <a href={`${base}/coming-soon`} class="block p-4 hover:bg-[var(--monochrome-text)]/5 transition-colors">
                                 <div class="font-semibold mb-1" style="color: var(--monochrome-text)">Join the Roundtables</div>
                                 <div class="text-sm text-[var(--text-secondary)]">Participate in agenda decisions</div>
                             </a>
@@ -68,7 +68,7 @@ const base = import.meta.env.BASE_URL;
                     <!-- Dropdown Content -->
                     <div class="absolute left-0 top-full pt-2 opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-200">
                         <div class="w-64 surface rounded-lg border border-[var(--monochrome-text)]/20 shadow-lg shadow-black/50 backdrop-blur-xl overflow-hidden">
-                            <a href={`${base}manifesto`} class="block p-4 hover:bg-[var(--monochrome-text)]/5 transition-colors">
+                            <a href={`${base}/manifesto`} class="block p-4 hover:bg-[var(--monochrome-text)]/5 transition-colors">
                                 <div class="font-semibold mb-1" style="color: var(--monochrome-text)">Manifesto</div>
                                 <div class="text-sm text-[var(--text-secondary)]">Our vision for fair music streaming</div>
                             </a>
@@ -85,10 +85,10 @@ const base = import.meta.env.BASE_URL;
         </div>
 
         <div class="hidden lg:block">
-            <a href={`${base}coming-soon`} class="btn btn-secondary mr-2">
+            <a href={`${base}/coming-soon`} class="btn btn-secondary mr-2">
                 For Artists & Labels
             </a>
-            <a href={`${base}coming-soon`} class="btn btn-primary">Download App</a>
+            <a href={`${base}/coming-soon`} class="btn btn-primary">Download App</a>
 
         </div>
     </div>
@@ -116,20 +116,20 @@ const base = import.meta.env.BASE_URL;
             <div class="py-2">
                 <div class="font-medium mb-2 text-[var(--text-primary)]">Resources</div>
                 <a
-                    href={`${base}manifesto`}
+                    href={`${base}/manifesto`}
                     class="block py-2 pl-4 text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors"
                 >
                     Manifesto
                 </a>
                 <a
-                    href={`${base}docs/handbook`}
+                    href={`${base}/docs/handbook`}
                     class="block py-2 pl-4 text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors"
                 >
                     Developer Handbook
                 </a>
             </div>
             <div class="pt-2">
-                <a href={`${base}#waitlist`} class="btn btn-primary w-full justify-center">Join Waitlist</a>
+                <a href={`${base}/#waitlist`} class="btn btn-primary w-full justify-center">Join Waitlist</a>
             </div>
         </nav>
     </div>
